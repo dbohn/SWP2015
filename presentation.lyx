@@ -90,6 +90,26 @@ Institut für Informatik
 David Bohn, Luca Keidel, Fabian Reimeier
 \end_layout
 
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout TitleGraphic
+silberlaube2
+\end_layout
+
 \begin_layout Frame
 \begin_inset Argument 4
 status open
