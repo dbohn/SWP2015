@@ -4,7 +4,21 @@
 \begin_header
 \textclass beamer
 \begin_preamble
+\usepackage{lmodern}
 \usetheme{BerlinFU}
+\mode
+<all>
+{
+  \renewcommand\titlegraphic[2][]{%
+    \edef\inserttitlegraphic{%
+      \ifx\relax#2\relax\else
+        \noexpand\includegraphics[height=\FU@image@height,width=\the\numexpr\textwidth-\wd\FU@box\relax sp,
+          %viewpoint=0 0 \the\numexpr\FU@image@width-2\wd\FU@box\relax sp \FU@image@height,clip
+          keepaspectratio=false,#1]{#2}%
+      \fi}%
+    }%
+  \titlegraphic{}
+}
 \renewcommand\makebeamertitle{\maketitle}
 \end_preamble
 \options t,smaller
