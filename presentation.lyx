@@ -5,6 +5,7 @@
 \textclass beamer
 \begin_preamble
 \usepackage{lmodern}
+\usepackage{gitinfo2}
 \usetheme{BerlinFU}
 \mode
 <all>
@@ -20,6 +21,9 @@
   \titlegraphic{}
 }
 \renewcommand\makebeamertitle{\maketitle}
+\renewcommand{\FU@footline}{%
+  \mbox{}\insertfachbereich, \inserttitle, \gitAbbrevHash, \insertdate 
+  \hfill \insertframenumber/\inserttotalframenumber}
 \end_preamble
 \options t,smaller
 \use_default_options true
