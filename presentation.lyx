@@ -5,6 +5,7 @@
 \textclass beamer
 \begin_preamble
 \usetheme{BerlinFU}
+\renewcommand\makebeamertitle{\maketitle}
 \end_preamble
 \options t,smaller
 \use_default_options true
@@ -133,6 +134,10 @@ Was ist eine Metaheuristik?
 \end_layout
 
 \begin_deeper
+\begin_layout FrameSubtitle
+Das 1x1 der Begriffe
+\end_layout
+
 \begin_layout Itemize
 Verfahren zur näherungsweisen Lösung von Optimierungsproblemen
 \end_layout
