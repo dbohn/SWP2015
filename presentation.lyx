@@ -159,6 +159,16 @@ Grundlegende Definitionen
 \end_layout
 
 \begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
 \begin_inset Argument 4
 status open
 
@@ -173,16 +183,6 @@ Was ist eine (Meta-)heuristik?
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-+-|alert@+
-\end_layout
-
-\end_inset
-
-
 \begin_inset ERT
 status open
 
@@ -271,6 +271,16 @@ Problemstellung
 \end_layout
 
 \begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
 \begin_inset Argument 4
 status open
 
@@ -285,15 +295,6 @@ Problemstellung
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-+-|alert@+
-\end_layout
-
-\end_inset
-
 Generische Implementierung verschiedener Metaheuristiken:
 \end_layout
 
@@ -365,6 +366,16 @@ Simulated Annealing
 \end_layout
 
 \begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
 \begin_inset Argument 4
 status open
 
@@ -379,15 +390,6 @@ Simulated Annealing
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-+-|alert@+
-\end_layout
-
-\end_inset
-
 Motiviert durch phys.
  Vorgänge in Metallverarbeitung
 \end_layout
@@ -468,6 +470,16 @@ Wahrscheinlichkeit eine schlechtere Lösung zu akzeptieren sinkt je weiter
 \end_layout
 
 \begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
 \begin_inset Argument 4
 status open
 
@@ -769,6 +781,16 @@ Ameisenalgorithmus
 \end_layout
 
 \begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
 \begin_inset Argument 4
 status open
 
@@ -783,15 +805,6 @@ Ameisenalgorithmus
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-+-|alert@+
-\end_layout
-
-\end_inset
-
 Inspiriert durch das Verhalten von Ameisenkolonien bzw.
  Ameisenstraßen:
 \end_layout
@@ -874,6 +887,16 @@ Genetische Algorithmen
 \end_layout
 
 \begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
 \begin_inset Argument 4
 status open
 
@@ -888,15 +911,6 @@ Genetische Algorithmen
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-+-|alert@+
-\end_layout
-
-\end_inset
-
 Optimierungsverfahren basierend auf genetischer Evolution
 \end_layout
 
@@ -1056,15 +1070,6 @@ Mutation
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-+-|alert@+
-\end_layout
-
-\end_inset
-
 Die neuen Zustände verdrängen u.U.
  existierende Zustände (
 \begin_inset ERT
@@ -1122,6 +1127,16 @@ Particle Swarm Optimization
 \end_layout
 
 \begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
 \begin_inset Argument 4
 status open
 
@@ -1136,15 +1151,6 @@ Particle Swarm Optimization
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-+-|alert@+
-\end_layout
-
-\end_inset
-
 Basiert auf Verhaltungsbeobachtung von Individuen in Vogelschwärmen
 \end_layout
 
@@ -1205,6 +1211,16 @@ Glühwürmchen Algorithmus (Firefly Algorithm)
 \end_layout
 
 \begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
 \begin_inset Argument 4
 status open
 
@@ -1219,15 +1235,6 @@ Firefly Algorithm
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-+-|alert@+
-\end_layout
-
-\end_inset
-
 Algorithmus basiert auf dem Verhalten von Glühwürmchen
 \end_layout
 
@@ -1319,6 +1326,16 @@ Traveling Salesman Problem (TSP)
 \end_layout
 
 \begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
 \begin_inset Argument 4
 status open
 
@@ -1421,6 +1438,16 @@ Zielfunktion: Summe der Kantengewichte der Route
 \end_layout
 
 \begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
 \begin_inset Argument 4
 status open
 

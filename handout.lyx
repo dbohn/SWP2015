@@ -24,6 +24,7 @@
 \renewcommand{\FU@footline}{%
   \mbox{}\insertfachbereich, \inserttitle, \gitAbbrevHash, \insertdate 
   \hfill \insertframenumber/\inserttotalframenumber}
+\setbeamercovered{transparent=100}
 \end_preamble
 \options t,smaller,handout
 \use_default_options true
