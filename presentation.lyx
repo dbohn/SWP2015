@@ -173,6 +173,16 @@ Was ist eine (Meta-)heuristik?
 
 \begin_deeper
 \begin_layout Itemize
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
++-|alert@+
+\end_layout
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -275,6 +285,15 @@ Problemstellung
 
 \begin_deeper
 \begin_layout Itemize
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
++-|alert@+
+\end_layout
+
+\end_inset
+
 Generische Implementierung verschiedener Metaheuristiken:
 \end_layout
 
@@ -360,6 +379,15 @@ Simulated Annealing
 
 \begin_deeper
 \begin_layout Itemize
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
++-|alert@+
+\end_layout
+
+\end_inset
+
 Motiviert durch phys.
  Vorgänge in Metallverarbeitung
 \end_layout
@@ -860,6 +888,15 @@ Genetische Algorithmen
 
 \begin_deeper
 \begin_layout Itemize
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
++-|alert@+
+\end_layout
+
+\end_inset
+
 Optimierungsverfahren basierend auf genetischer Evolution
 \end_layout
 
@@ -1019,6 +1056,15 @@ Mutation
 \end_layout
 
 \begin_layout Itemize
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
++-|alert@+
+\end_layout
+
+\end_inset
+
 Die neuen Zustände verdrängen u.U.
  existierende Zustände (
 \begin_inset ERT
@@ -1090,6 +1136,15 @@ Particle Swarm Optimization
 
 \begin_deeper
 \begin_layout Itemize
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
++-|alert@+
+\end_layout
+
+\end_inset
+
 Basiert auf Verhaltungsbeobachtung von Individuen in Vogelschwärmen
 \end_layout
 
@@ -1164,6 +1219,15 @@ Firefly Algorithm
 
 \begin_deeper
 \begin_layout Itemize
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
++-|alert@+
+\end_layout
+
+\end_inset
+
 Algorithmus basiert auf dem Verhalten von Glühwürmchen
 \end_layout
 
@@ -1269,6 +1333,15 @@ Traveling Salesman Problem (TSP)
 
 \begin_deeper
 \begin_layout Itemize
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
++-|alert@+
+\end_layout
+
+\end_inset
+
 Problem des Handlungsreisenden:
 \end_layout
 
