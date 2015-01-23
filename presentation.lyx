@@ -155,7 +155,7 @@ Einführung
 \end_layout
 
 \begin_layout Subsection
-Was ist eine Metaheuristik?
+Grundlegende Definitionen
 \end_layout
 
 \begin_layout Frame
@@ -163,7 +163,7 @@ Was ist eine Metaheuristik?
 status open
 
 \begin_layout Plain Layout
-Was ist eine Metaheuristik?
+Was ist eine (Meta-)heuristik?
 \end_layout
 
 \end_inset
@@ -172,25 +172,167 @@ Was ist eine Metaheuristik?
 \end_layout
 
 \begin_deeper
-\begin_layout FrameSubtitle
-Das 1x1 der Begriffe
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+alert{Heuristik}
 \end_layout
 
-\begin_layout Itemize
-Verfahren zur näherungsweisen Lösung von Optimierungsproblemen
-\end_layout
+\end_inset
 
-\begin_layout Itemize
-Viele Probleme, die wir gerne lösen können würden, sind NP-schwer, z.B.:
+:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Traveling Salesman Problem
+Suche von guten (d.h.
+ nahezu optimalen) Lösungen für ein Optimierungsproblem in kurzer Zeit
 \end_layout
 
 \begin_layout Itemize
-Packen und Stapeln von Polygonen
+Aber: 
+\emph on
+keine
+\emph default
+ Garantie für Gültigkeit oder Optimalität
+\end_layout
+
+\begin_layout Itemize
+Oftmals problembezogen
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+alert{Metaheuristik}
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Problemunabhängiges Optimierungsverfahren
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Problembezogene Teile werden gekapselt
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Problemunabhängiger Algorithmus steuert problembezogenen Algorithmus
+\end_layout
+
+\begin_layout Itemize
+Unterliegen aber ebenfalls den selben Beschränkungen wie Heuristiken
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Problemstellung
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problemstellung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Generische Implementierung verschiedener Metaheuristiken:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Simulated Annealing
+\end_layout
+
+\begin_layout Itemize
+Genetische Algorithmen
+\end_layout
+
+\begin_layout Itemize
+Particle Swarm Optimization
+\end_layout
+
+\begin_layout Itemize
+Firefly Algorithmus
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Test der implementierten Metaheuristiken anhand verschiedener Probleme
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Test anhand des Traveling Salesman Problems
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+alert{Verwendung im Kontext von Stapeln und Packen:}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Stapeln einfacher Polygone
+\end_layout
+
+\begin_layout Itemize
+Packen beliebiger Polygone
+\end_layout
+
+\begin_layout Itemize
+Packen von Rechtecken
 \end_layout
 
 \end_deeper
@@ -590,5 +732,701 @@ Exponentielle Abkühlung
 \end_layout
 
 \end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Subsection
+Ameisenalgorithmus
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Ameisenalgorithmus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
++-|alert@+
+\end_layout
+
+\end_inset
+
+Inspiriert durch das Verhalten von Ameisenkolonien bzw.
+ Ameisenstraßen:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Ameisen bilden und markieren Weg mit Pheromonen
+\end_layout
+
+\begin_layout Itemize
+In selber Zeit erhalten kürzere Wege mehr Pheromon als längere Wege
+\end_layout
+
+\begin_layout Itemize
+Es ist wahrscheinlicher, dass Ameisen einen Weg mit mehr Pheromon wählen
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Übertragen auf Algorithmus:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Lösungs-Konstruktion mittels Zufallsentscheidung und Erweiterung einer Teillösun
+g
+\end_layout
+
+\begin_layout Itemize
+Entstehende Entscheidungsfolge entspricht Pfad durch Entscheidungsgraphen
+\end_layout
+
+\begin_layout Itemize
+Ameisen sollen den kürzesten Weg im Entscheidungsgraphen finden
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Problem:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Algorithmus setzt diskreten Suchraum voraus
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+alert{Für Stapeln und Packen ungeeignet}
+\end_layout
+
+\end_inset
+
+ (kontinuierlicher Suchraum)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Genetische Algorithmen
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Genetische Algorithmen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Optimierungsverfahren basierend auf genetischer Evolution
+\end_layout
+
+\begin_layout Itemize
+Beginnt mit einer 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+alert{Population}
+\end_layout
+
+\end_inset
+
+ (=Menge) von möglichen Lösungen
+\end_layout
+
+\begin_layout Itemize
+Zustände der Population entwickeln sich auf zwei Arten:
+\end_layout
+
+\begin_layout Pause
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename assets/genetic_crossover.pdf
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Kreuzung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename assets/genetic_mutation.pdf
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mutation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Die neuen Zustände verdrängen u.U.
+ existierende Zustände (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+alert{survival of the fittest}
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+Population 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+alert{degeneriert}
+\end_layout
+
+\end_inset
+
+ (d.h.
+ es gibt keine Veränderungen mehr)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Lösung: Insular GA
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Verteilung der Population auf einzelne Inseln
+\end_layout
+
+\begin_layout Itemize
+Degenerieren die Inseln, werden Zustände ausgetauscht
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Particle Swarm Optimization
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Particle Swarm Optimization
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Basiert auf Verhaltungsbeobachtung von Individuen in Vogelschwärmen
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Evaluation, Vergleich und Imitation 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Individuen werden im Algorithmus als Partikel dargestellt, jeder Partikel
+ repräsentiert eine mögliche Lösung
+\end_layout
+
+\begin_layout Itemize
+Partikel können sich mit individueller Geschwindigkeit bewegen in bel.
+ Richtung, können sich ihre jemals beste erreichte Position merken
+\end_layout
+
+\begin_layout Itemize
+Algorithmus basiert auf Iterationen, in jeder Iteration bewegt sich jeder
+ Partikel
+\end_layout
+
+\begin_layout Itemize
+Partikel haben drei Möglichkeiten zur Bewegung:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Lokale Suche unabhängig von anderen Partikeln
+\end_layout
+
+\begin_layout Enumerate
+Orientierung am eigenen Optimum
+\end_layout
+
+\begin_layout Enumerate
+Orientierung am Schwarm-Optimum (global oder in Nachbarschaft)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Glühwürmchen Algorithmus (Firefly Algorithm)
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Firefly Algorithm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Algorithmus basiert auf dem Verhalten von Glühwürmchen
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+alert{Glühwürmchen}
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Fliegen herum und leuchten
+\end_layout
+
+\begin_layout Itemize
+Fühlen sich von Licht angezogen und fliegen auf dieses zu
+\end_layout
+
+\begin_layout Itemize
+Je heller die Lichtquelle, desto größer die Anziehung
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+alert{Glühwürmchen Algorithmus}
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Ein Glühwürmchen ist Lösung eines Problems
+\end_layout
+
+\begin_layout Itemize
+Die Leuchtkraft des Glühwürmchens ist die Güte der Lösung
+\end_layout
+
+\begin_layout Itemize
+Die Bewegung eines Glühwürmchens ist die Veränderung der Lösung
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Entweder zufällig oder zu einem helleren Glühwürmchen
+\end_layout
+
+\begin_layout Itemize
+Durch die Bewegung verändert sich die Helligkeit des Glühwürmchens
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Je heller das Glühwürmchen scheint, desto weiter reicht sein Licht
+\end_layout
+
+\begin_layout Itemize
+Jede Lösung nähert sich also besseren Lösungen in der Nähe an
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Section
+Tests
+\end_layout
+
+\begin_layout Subsection
+Traveling Salesman Problem (TSP)
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Traveling Salesman Problem (TSP)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Problem des Handlungsreisenden:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Handlungsreisender will 
+\begin_inset Formula $n$
+\end_inset
+
+ Städte jeweils genau einmal besuchen
+\end_layout
+
+\begin_layout Itemize
+Befindet sich dabei in einer Startstadt, zu der er abschließend zurückkehrt
+\end_layout
+
+\begin_layout Itemize
+Gesucht ist die kürzeste Route zwischen den 
+\begin_inset Formula $n$
+\end_inset
+
+ Städten
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Mathematische Modellierung als gewichteter, ungerichteter Graph
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+alert{Knoten}
+\end_layout
+
+\end_inset
+
+: Städte
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+alert{Kanten}
+\end_layout
+
+\end_inset
+
+: Verbindung zwischen den Städten, Gewicht entspricht Distanz
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+TSP ist NP-schweres Optimierungsproblem:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Zielfunktion: Summe der Kantengewichte der Route
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+GUI zur Visualisierung des TSP
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename assets/tsp_gui2.png
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Visualisierung des TSP, Knoten sind in horizontaler und vertikaler Richtung
+ jeweils 1 Einheit entfernt 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+Kürzeste Route 
+\begin_inset Formula $100$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
