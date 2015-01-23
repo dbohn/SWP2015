@@ -195,5 +195,400 @@ Packen und Stapeln von Polygonen
 
 \end_deeper
 \end_deeper
+\begin_layout Section
+Umsetzung
+\end_layout
+
+\begin_layout Subsection
+Simulated Annealing
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Simulated Annealing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Motiviert durch phys.
+ Vorgänge in Metallverarbeitung
+\end_layout
+
+\begin_layout Itemize
+Metall wird zunächst stark erhitzt, dann langsam abgekühlt
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Atome bilden stabile Kristalle
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Grober Ablauf:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Als Startlösung wird eine zufällige Lösung gewählt
+\end_layout
+
+\begin_layout Enumerate
+Solange das Abbruchkriterium nicht erfüllt ist:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Generiere neue Lösung (unter Einbeziehung des Zufalls)
+\end_layout
+
+\begin_layout Enumerate
+Akzeptiere neue Lösung wenn sie besser ist oder per Zufallsentscheidung
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Im Verlauf des Algorithmus können 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+alert{auch schlechtere Lösungen akzeptiert}
+\end_layout
+
+\end_inset
+
+ werden
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Wahrscheinlichkeit eine schlechtere Lösung zu akzeptieren sinkt je weiter
+ die Temperatur sinkt
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Simulated Annealing - Abkühlungskurven
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename assets/linear_cs.pdf
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Lineare Abkühlung 
+\begin_inset Formula $T(t)=T(0)\cdot\left(1-\frac{t}{N}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename assets/logarithmic_cs.pdf
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Logarithmische Abkühlung 
+\begin_inset Formula $T(t)=T(0)\cdot\frac{\alpha}{\ln\left(1+t\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename assets/geometric_cs.pdf
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Geometrische Abkühlung 
+\begin_inset Formula $T(t)=T(0)\cdot\alpha^{t}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename assets/exponential_cs.pdf
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Exponentielle Abkühlung 
+\begin_inset Formula $T(t)=T(0)\cdot e^{-\alpha\sqrt{t}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
