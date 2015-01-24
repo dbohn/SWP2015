@@ -422,7 +422,11 @@ Grober Ablauf:
 
 \begin_deeper
 \begin_layout Enumerate
-Als Startlösung wird eine zufällige Lösung gewählt
+Als Startlösung 
+\begin_inset Formula $x(0)$
+\end_inset
+
+ wird eine zufällige Lösung gewählt
 \end_layout
 
 \begin_layout Enumerate
@@ -431,11 +435,47 @@ Solange das Abbruchkriterium nicht erfüllt ist:
 
 \begin_deeper
 \begin_layout Enumerate
-Generiere neue Lösung (unter Einbeziehung des Zufalls)
+Generiere neue Lösung 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ (unter Einbeziehung des Zufalls)
 \end_layout
 
 \begin_layout Enumerate
-Akzeptiere neue Lösung wenn sie besser ist oder per Zufallsentscheidung
+Akzeptiere neue Lösung 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ wenn sie besser ist als 
+\begin_inset Formula $x(t)$
+\end_inset
+
+ oder per Zufallsentscheidung
+\end_layout
+
+\begin_layout Itemize
+Wahrscheinlichkeit nach 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+alert{Boltzmann-Gibbs-Verteilung}
+\end_layout
+
+\end_inset
+
+: 
+\begin_inset Formula $P=\begin{cases}
+1 & \text{wenn }f(x^{*})<f(x(t))\\
+e^{-\frac{f(x^{*})-f(x(t))}{T(t)}} & \text{sonst}
+\end{cases}$
+\end_inset
+
+
 \end_layout
 
 \end_deeper
