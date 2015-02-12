@@ -4,14 +4,27 @@
 \begin_header
 \textclass beamer
 \begin_preamble
+% for including git specific information
 \usepackage{gitinfo2}
+
+% use the FU Berlin theme
 \usetheme{BerlinFU}
 
+% a nice font
 \usepackage{arev,t1enc}
 
-\setbeamercolor{structure}{fg=FUblue}
-\setbeamercolor*{alerted text}{fg=FUblue,bg=white}
+% additional color definitions
+\definecolor{SecBlue}{RGB}{0,102,204}
 
+% set custom colors in the theme
+\setbeamercolor{structure}{fg=FUblue}
+\setbeamercolor*{alerted text}{fg=SecBlue,bg=white}
+\setbeamercolor*{frametitle}{fg=FUblue,bg=white}
+
+% use a vector graphic logo
+\pgfdeclareimage[height=1cm]{logo}{FULogo_RGB.pdf}
+
+% bugfix for keepaspectratio
 \mode
 <all>
 {
@@ -26,8 +39,10 @@
   \titlegraphic{}
 }
 \renewcommand\makebeamertitle{\maketitle}
+
+% custom footer
 \renewcommand{\FU@footline}{%
-  \mbox{}\insertfachbereich, \inserttitle, \gitAbbrevHash, \insertdate 
+  \mbox{}\insertfachbereich, \inserttitle, \text{Version: }\texttt{\gitAbbrevHash}, \insertdate 
   \hfill \insertframenumber/\inserttotalframenumber}
 \end_preamble
 \options t,smaller
@@ -98,11 +113,24 @@
 \begin_body
 
 \begin_layout Title (Plain Frame)
-Metaheuristiken (Gruppe 3 - 1)
+Metaheuristiken (Gruppe 3-1)
 \end_layout
 
 \begin_layout Subtitle
-Verfahren zur näherungsweisen Lösung von Optimierungsproblemen
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{SecBlue}{Verfahren zur näherungsweisen Lösung von Optimierungsprobleme
+n}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Institute
@@ -127,10 +155,6 @@ today
 \end_inset
 
 
-\end_layout
-
-\begin_layout TitleGraphic
-titlegraphic3
 \end_layout
 
 \begin_layout Frame
