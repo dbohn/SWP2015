@@ -4,9 +4,27 @@
 \begin_header
 \textclass beamer
 \begin_preamble
-\usepackage{lmodern}
+% for including git specific information
 \usepackage{gitinfo2}
+
+% use the FU Berlin theme
 \usetheme{BerlinFU}
+
+% a nice font
+\usepackage{arev,t1enc}
+
+% additional color definitions
+\definecolor{SecBlue}{RGB}{0,102,204}
+
+% set custom colors in the theme
+\setbeamercolor{structure}{fg=FUblue}
+\setbeamercolor*{alerted text}{fg=SecBlue,bg=white}
+\setbeamercolor*{frametitle}{fg=FUblue,bg=white}
+
+% use a vector graphic logo
+\pgfdeclareimage[height=1cm]{logo}{FULogo_RGB.pdf}
+
+% bugfix for keepaspectratio
 \mode
 <all>
 {
@@ -21,8 +39,10 @@
   \titlegraphic{}
 }
 \renewcommand\makebeamertitle{\maketitle}
+
+% custom footer
 \renewcommand{\FU@footline}{%
-  \mbox{}\insertfachbereich, \inserttitle, \gitAbbrevHash, \insertdate 
+  \mbox{}\insertfachbereich, \inserttitle, \text{Version: }\texttt{\gitAbbrevHash}, \insertdate 
   \hfill \insertframenumber/\inserttotalframenumber}
 \end_preamble
 \options t,smaller
@@ -43,7 +63,7 @@
 \font_sf_scale 100
 \font_tt_scale 100
 \graphics default
-\default_output_format default
+\default_output_format pdf2
 \output_sync 0
 \bibtex_command default
 \index_command default
@@ -93,11 +113,24 @@
 \begin_body
 
 \begin_layout Title (Plain Frame)
-Metaheuristiken (Gruppe 3 - 1)
+Metaheuristiken (Gruppe 3-1)
 \end_layout
 
 \begin_layout Subtitle
-Verfahren zur näherungsweisen Lösung von Optimierungsproblemen
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{SecBlue}{Verfahren zur näherungsweisen Lösung von Optimierungsprobleme
+n}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Institute
@@ -122,10 +155,6 @@ today
 \end_inset
 
 
-\end_layout
-
-\begin_layout TitleGraphic
-titlegraphic2
 \end_layout
 
 \begin_layout Frame
@@ -422,11 +451,7 @@ Grober Ablauf:
 
 \begin_deeper
 \begin_layout Enumerate
-Als Startlösung 
-\begin_inset Formula $x(0)$
-\end_inset
-
- wird eine zufällige Lösung gewählt
+Als Startlösung wird eine zufällige Lösung gewählt
 \end_layout
 
 \begin_layout Enumerate
@@ -435,47 +460,11 @@ Solange das Abbruchkriterium nicht erfüllt ist:
 
 \begin_deeper
 \begin_layout Enumerate
-Generiere neue Lösung 
-\begin_inset Formula $x^{*}$
-\end_inset
-
- (unter Einbeziehung des Zufalls)
+Generiere neue Lösung (unter Einbeziehung des Zufalls)
 \end_layout
 
 \begin_layout Enumerate
-Akzeptiere neue Lösung 
-\begin_inset Formula $x^{*}$
-\end_inset
-
- wenn sie besser ist als 
-\begin_inset Formula $x(t)$
-\end_inset
-
- oder per Zufallsentscheidung
-\end_layout
-
-\begin_layout Itemize
-Wahrscheinlichkeit nach 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-alert{Boltzmann-Gibbs-Verteilung}
-\end_layout
-
-\end_inset
-
-: 
-\begin_inset Formula $P=\begin{cases}
-1 & \text{wenn }f(x^{*})<f(x(t))\\
-e^{-\frac{f(x^{*})-f(x(t))}{T(t)}} & \text{sonst}
-\end{cases}$
-\end_inset
-
-
+Akzeptiere neue Lösung wenn sie besser ist oder per Zufallsentscheidung
 \end_layout
 
 \end_deeper
@@ -1568,26 +1557,20 @@ Kürzeste Route
 
 \end_layout
 
-\begin_layout Separator
+\begin_layout Section
+Controller
+\end_layout
 
+\begin_layout Subsection
+Generisch
 \end_layout
 
 \begin_layout Frame
-\begin_inset Argument 3
-status open
-
-\begin_layout Plain Layout
-c
-\end_layout
-
-\end_inset
-
-
 \begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-GUI zur Visualisierung des TSP
+Generischer Controller
 \end_layout
 
 \end_inset
@@ -1595,61 +1578,11 @@ GUI zur Visualisierung des TSP
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename assets/tsp_gui3.png
-	width 80col%
-
-\end_inset
-
-
+\begin_deeper
+\begin_layout Itemize
+wer ist doof
 \end_layout
 
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Optimierung mittels Simulated Annealing, Lineare Abkühlung, 100 000 Schritte,
- Starttemperatur 1
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
+\end_deeper
 \end_body
 \end_document
