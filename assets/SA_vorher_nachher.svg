@@ -1,0 +1,102 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:latexdraw="http://latexdraw.sourceforge.net/namespaces/latexdraw"
+    version="1.1" baseProfile="full">
+    <g>
+        <g latexdraw:type="circle" id="id1449961997">
+            <circle cx="702.5102040816328" cy="356.44897959183663"
+                r="59.87755102040819" latexdraw:borderPos="outer"
+                stroke-width="2.0" stroke="#cccccc" fill="#6666ff"/>
+        </g>
+        <g latexdraw:type="circle" id="id923263278">
+            <circle cx="408.0714285714284" cy="234.41836734693868"
+                r="31.153061224489704" latexdraw:borderPos="outer"
+                stroke-width="2.0" stroke="#cccccc" fill="#ff9999"/>
+        </g>
+        <g latexdraw:type="circle" id="id530092357">
+            <circle cx="563.5102040816328" cy="318.4489795918366"
+                r="37.87755102040819" latexdraw:borderPos="outer"
+                stroke-width="2.0" stroke="#cccccc" fill="#6666ff"/>
+        </g>
+        <g latexdraw:type="circle" id="id854672661">
+            <circle cx="245.5816326530611" cy="110.58163265306122"
+                r="29.47959183673457" latexdraw:borderPos="outer"
+                stroke-width="2.0" stroke="#cccccc" fill="red"/>
+        </g>
+        <g latexdraw:type="circle" id="id1539877917">
+            <circle cx="300.48979591836735" cy="159.9387755102041"
+                r="19.428571428571445" latexdraw:borderPos="outer"
+                stroke-width="2.0" stroke="#cccccc" fill="#ff3366"/>
+        </g>
+        <g latexdraw:type="circle" id="id472156385">
+            <circle cx="351.5714285714284" cy="199.91836734693868"
+                r="12.653061224489704" latexdraw:borderPos="outer"
+                stroke-width="2.0" stroke="#cccccc" fill="#ff9999"/>
+        </g>
+        <g latexdraw:type="circle" id="id703123050">
+            <circle cx="476.1530612244899" cy="279.84693877551024"
+                r="21.377551020407964" latexdraw:borderPos="outer"
+                stroke-width="2.0" stroke="#cccccc" fill="#9999ff"/>
+        </g>
+        <g latexdraw:type="circle" id="id1090395570">
+            <circle cx="878.1938775510201" cy="386.82653061224477"
+                r="78.6020408163264" latexdraw:borderPos="outer"
+                stroke-width="2.0" stroke="#cccccc" fill="blue"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id108543114">
+            <polyline
+                points="242.85714285714283,111.375 330.61224489795904,189.5 400.8163265306123,236.375 453.46938775510205,267.625 541.2244897959182,314.5 628.9795918367345,345.75 734.2857142857142,377.0 804.4897959183672,392.625 874.6938775510205,408.25 874.6938775510205,408.25 "
+                stroke-width="2.0" stroke="black" fill="none" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id861120875">
+            <polyline points="120.0,468.75 980.0,468.75 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0" marker-end="url(#arrow1-861120875)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id257984078">
+            <polyline points="120.0,468.75 120.0,0.0 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0" marker-end="url(#arrow1-257984078)"/>
+        </g>
+        <g latexdraw:type="text" id="id223119025" fill="black" latexdraw:position="bl">
+            <text x="0.0" y="20.0"><![CDATA[Temperatur]]></text>
+        </g>
+        <g latexdraw:type="text" id="id1905478085" fill="black" latexdraw:position="bl">
+            <text x="949.7959183673468" y="500.0"><![CDATA[Zeit]]></text>
+        </g>
+    </g>
+    <defs>
+        <marker overflow="visible" orient="auto" id="arrow1-861120875">
+            <path
+                d="M 0.0 0.0 L -4.652083333333334 1.6614583333333335 L -4.652083333333334 0.0 L -4.652083333333334 -1.6614583333333335 z "
+                latexdraw:arrSizeNum="2.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow1-257984078">
+            <path
+                d="M 0.0 0.0 L -4.652083333333334 1.6614583333333335 L -4.652083333333334 0.0 L -4.652083333333334 -1.6614583333333335 z "
+                latexdraw:arrSizeNum="2.0" fill="black"/>
+        </marker>
+    </defs>
+    <metadata>
+        <latexdraw:metadata>
+            <latexdraw:latexIncludes><![CDATA[
+]]></latexdraw:latexIncludes>
+            <latexdraw:displayXScale>true</latexdraw:displayXScale>
+            <latexdraw:displayYScale>true</latexdraw:displayYScale>
+            <latexdraw:unit>CM</latexdraw:unit>
+            <latexdraw:zoom>1.0</latexdraw:zoom>
+            <latexdraw:magneticGridStyle>CUSTOMISED</latexdraw:magneticGridStyle>
+            <latexdraw:gridGap>20</latexdraw:gridGap>
+            <latexdraw:magneticGrid>false</latexdraw:magneticGrid>
+            <latexdraw:version>3.3.1</latexdraw:version>
+            <latexdraw:size>
+                <latexdraw:width>1920</latexdraw:width>
+                <latexdraw:height>1176</latexdraw:height>
+            </latexdraw:size>
+            <latexdraw:position>
+                <latexdraw:x>9.0</latexdraw:x>
+                <latexdraw:y>2.0</latexdraw:y>
+            </latexdraw:position>
+        </latexdraw:metadata>
+    </metadata>
+</svg>
