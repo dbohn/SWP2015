@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:latexdraw="http://latexdraw.sourceforge.net/namespaces/latexdraw"
+    version="1.1" baseProfile="full">
+    <g>
+        <g latexdraw:type="polygon" id="id24">
+            <polygon
+                points="143.29192007000006,205.79752945 136.09005690999993,86.09317210999998 62.95969378999996,83.86831465 "
+                stroke-width="1.0" stroke="#4d4d4d" fill="#999999" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="polygon" id="id26">
+            <polygon
+                points="85.80059240000003,81.88000725999999 72.76431714,139.87186470999998 92.81626165,237.84083696 126.51545493999993,143.16050966 140.48780117,127.64363043999998 165.53923940999994,107.40936638 97.17654153000001,29.73992885 "
+                stroke-width="1.0" stroke="#4d4d4d" fill="#999999" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="polygon" id="id20">
+            <polygon
+                points="97.17654153000001,29.739928850000013 4.192395439999984,58.11484116999998 25.45493621999998,131.22190483999998 48.72231762000001,196.68421653999997 92.81626165,237.84083695999993 190.31199650999997,183.46831783 211.34187522000002,122.7930331 193.84766568999999,101.20709718 146.774045,59.440423399999986 "
+                stroke-width="1.0" stroke="black" fill="#000000"
+                fill-opacity="0.0" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="polygon" id="id22">
+            <polygon
+                points="108.12985288999994,69.06468532 89.68368575,102.22699703 48.72231762000001,196.68421654 139.47232492,161.041038 157.30531936,125.72837299999998 160.21017488999996,91.88222381 146.774045,59.4404234 "
+                stroke-width="1.0" stroke="#4d804d" fill="#80b380" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="polygon" id="id23">
+            <polygon
+                points="117.05438363000007,88.76555995000001 163.06205559,118.09633080999998 25.454936220000036,131.22190483999998 57.39987311999994,167.78036476 120.80462362000003,159.01465747999998 211.34187522000002,122.7930331 193.84766568999999,101.20709718 154.84139804999995,91.03305699999999 "
+                stroke-width="1.0" stroke="#b3b34d" fill="#ddff87" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="polygon" id="id25">
+            <polygon
+                points="190.31199650999997,183.46831783 150.83727886999998,134.17585727 4.1923954399999275,58.11484116999999 "
+                stroke-width="1.0" stroke="#1a3399" fill="#80adff" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="polygon" id="id46">
+            <polygon
+                points="470.31199651,183.46831783 430.83727887,134.17585727 284.1923954399999,58.11484116999999 "
+                stroke-width="1.0" stroke="#1a3399" fill="#80adff" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="polygon" id="id53">
+            <polygon
+                points="577.0543836300001,88.76555995000001 623.06205559,118.09633080999998 485.45493622000004,131.22190483999998 517.3998731199999,167.78036476 580.80462362,159.01465747999998 671.34187522,122.7930331 653.84766569,101.20709718 614.84139805,91.03305699999999 "
+                stroke-width="1.0" stroke="#b3b34d" fill="#ddff87" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="polygon" id="id61">
+            <polygon
+                points="728.1298528899999,69.06468532 709.68368575,102.22699703 668.72231762,196.68421653999997 759.47232492,161.041038 777.3053193599999,125.72837299999998 780.21017489,91.88222381 766.7740450000001,59.4404234 "
+                stroke-width="1.0" stroke="#4d804d" fill="#80b380" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="polygon" id="id74">
+            <polygon
+                points="805.8005924,81.88000725999999 792.76431714,139.87186470999998 812.81626165,237.84083696 846.5154549399999,143.16050966 860.48780117,127.64363043999998 885.5392394099999,107.40936638 817.17654153,29.73992885 "
+                stroke-width="1.0" stroke="#4d4d4d" fill="#999999" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="polygon" id="id83">
+            <polygon
+                points="303.29192007000006,205.79752945 296.09005690999993,86.09317210999998 222.95969378999996,83.86831465 "
+                stroke-width="1.0" stroke="#4d4d4d" fill="#999999" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="text" id="id104" fill="black" latexdraw:position="bl">
+            <text x="20.0" y="260.0"><![CDATA[Konvexe H\"ulle: 27.129]]></text>
+        </g>
+    </g>
+    <defs/>
+    <metadata>
+        <latexdraw:metadata>
+            <latexdraw:latexIncludes><![CDATA[]]></latexdraw:latexIncludes>
+            <latexdraw:displayXScale>true</latexdraw:displayXScale>
+            <latexdraw:displayYScale>true</latexdraw:displayYScale>
+            <latexdraw:unit>CM</latexdraw:unit>
+            <latexdraw:zoom>1.0</latexdraw:zoom>
+            <latexdraw:magneticGridStyle>CUSTOMISED</latexdraw:magneticGridStyle>
+            <latexdraw:gridGap>20</latexdraw:gridGap>
+            <latexdraw:magneticGrid>true</latexdraw:magneticGrid>
+            <latexdraw:version>3.2.0</latexdraw:version>
+            <latexdraw:size>
+                <latexdraw:width>1936</latexdraw:width>
+                <latexdraw:height>1056</latexdraw:height>
+            </latexdraw:size>
+            <latexdraw:position>
+                <latexdraw:x>-8.0</latexdraw:x>
+                <latexdraw:y>-8.0</latexdraw:y>
+            </latexdraw:position>
+        </latexdraw:metadata>
+    </metadata>
+</svg>
