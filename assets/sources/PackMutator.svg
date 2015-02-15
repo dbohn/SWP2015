@@ -38,7 +38,7 @@
         </g>
         <g latexdraw:type="polygon" id="id1035739801">
             <polygon
-                points="620.0,263.0 660.0,203.0 700.0,263.0 660.0,283.0 660.0,283.0 "
+                points="613.0769230769229,263.7692307692305 653.0769230769229,203.7692307692305 693.0769230769229,263.7692307692305 653.0769230769229,283.7692307692305 653.0769230769229,283.7692307692305 "
                 stroke-width="2.0" stroke="black" fill="#ff6666" latexdraw:rotationAngle="0.0"/>
         </g>
         <g latexdraw:type="rectangle" id="id1176329327">
@@ -161,7 +161,7 @@
             <latexdraw:zoom>1.3000000000000003</latexdraw:zoom>
             <latexdraw:magneticGridStyle>CUSTOMISED</latexdraw:magneticGridStyle>
             <latexdraw:gridGap>20</latexdraw:gridGap>
-            <latexdraw:magneticGrid>true</latexdraw:magneticGrid>
+            <latexdraw:magneticGrid>false</latexdraw:magneticGrid>
             <latexdraw:version>3.3.1</latexdraw:version>
             <latexdraw:size>
                 <latexdraw:width>1920</latexdraw:width>
