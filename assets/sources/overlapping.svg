@@ -3,16 +3,16 @@
     xmlns:latexdraw="http://latexdraw.sourceforge.net/namespaces/latexdraw"
     version="1.1" baseProfile="full">
     <g>
-        <g latexdraw:type="polygon" id="id300460332">
+        <g latexdraw:type="polygon" id="id147324561">
             <polygon
                 points="100.0,120.0 180.0,80.0 240.0,180.0 120.0,300.0 60.0,180.0 60.0,180.0 "
-                stroke-width="2.0" stroke="black" fill="#009900" latexdraw:rotationAngle="0.0"/>
+                stroke-width="2.0" stroke="black" fill="#00cc00" latexdraw:rotationAngle="0.0"/>
         </g>
-        <g latexdraw:type="polygon" id="id1651581243">
+        <g latexdraw:type="polygon" id="id2095211981">
             <polygon points="120.0,138.0 300.0,258.0 280.0,118.0 "
-                stroke-width="2.0" stroke="black" fill="#0066cc" latexdraw:rotationAngle="0.0"/>
+                stroke-width="2.0" stroke="black" fill="#00cccc" latexdraw:rotationAngle="0.0"/>
         </g>
-        <g latexdraw:type="polygon" id="id694797885">
+        <g latexdraw:type="polygon" id="id823374451">
             <polygon points="122.0,139.0 211.0,128.0 219.0,205.0 "
                 stroke-width="1.0" stroke="red" fill="red" latexdraw:rotationAngle="0.0"/>
         </g>
@@ -20,8 +20,7 @@
     <defs/>
     <metadata>
         <latexdraw:metadata>
-            <latexdraw:latexIncludes><![CDATA[
-]]></latexdraw:latexIncludes>
+            <latexdraw:latexIncludes><![CDATA[]]></latexdraw:latexIncludes>
             <latexdraw:displayXScale>true</latexdraw:displayXScale>
             <latexdraw:displayYScale>true</latexdraw:displayYScale>
             <latexdraw:unit>CM</latexdraw:unit>
