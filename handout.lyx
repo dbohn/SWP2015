@@ -4,9 +4,43 @@
 \begin_header
 \textclass beamer
 \begin_preamble
-\usepackage{lmodern}
+% for including git specific information
 \usepackage{gitinfo2}
+
+% use the FU Berlin theme
 \usetheme{BerlinFU}
+
+% a nice font
+\usepackage{isomath}
+\usepackage{sourcesanspro,t1enc}
+\usepackage{sourcecodepro,t1enc}
+
+% additional color definitions
+\definecolor{SecBlue}{RGB}{0,102,204}
+
+% set custom colors in the theme
+\setbeamercolor{structure}{fg=FUblue}
+\setbeamercolor*{alerted text}{fg=SecBlue,bg=white}
+\setbeamercolor*{frametitle}{fg=FUblue,bg=white}
+
+%\setbeamerfont{frametitle}{family=\fontfamily{fvs}}
+
+% use circles instead of arrows
+\setbeamertemplate{itemize items}[circle]
+
+\define@key{beamerframe}{wide}[5pt]{%
+  \def\beamer@cramped{\itemsep #1\topsep0.5pt\relax}}
+
+% use a vector graphic logo
+\pgfdeclareimage[height=1cm]{logo}{FULogo_RGB.pdf}
+
+%set titlegraphic image
+\expandafter\pgfdeclareimage\expandafter[height=\the\FU@image@height]{bib}{assets/Titelgrafik.pdf}
+\renewcommand\newsavebox\FU@box\savebox\FU@box{\pgfuseimage{bib}}
+% make background of titlebox white
+\definecolor{FUgray}{RGB}{255,255,255}
+
+% bugfix for keepaspectratio
 \mode
 <all>
 {
@@ -21,9 +55,12 @@
   \titlegraphic{}
 }
 \renewcommand\makebeamertitle{\maketitle}
+
+% custom footer
 \renewcommand{\FU@footline}{%
-  \mbox{}\insertfachbereich, \inserttitle, \gitAbbrevHash, \insertdate 
+  \mbox{}\insertfachbereich, \inserttitle, \text{Version: }\texttt{\gitAbbrevHash}, \insertdate 
   \hfill \insertframenumber/\inserttotalframenumber}
+
 \setbeamercovered{transparent=100}
 \end_preamble
 \options t,smaller,handout
