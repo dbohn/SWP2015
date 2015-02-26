@@ -82,12 +82,87 @@ Einleitung
 Motivation und Problemstellung
 \end_layout
 
-\begin_layout Subsection
-Grundlegende Definitionen
+\begin_layout Standard
+Das im Rahmen des Softwareprojekts untersuchte Stapeln und Packen von Polygonen
+ ist bereits in der einfachsten Version NP-schwer [Scheithauer, Wottawa].
+ Dies bedeutet, dass es sehr wahrscheinlich keinen Algorithmus gibt, der
+ eine optimale Stapelung bzw.
+ Packung für eine beliebige Anzahl von beliebigen Polygonen in polynomieller
+ Zeit findet.
+ Zur Approxmiation von optimalen Lösungen können allerdings Metaheuristiken
+ verwendet werden.
+ [TODO: Definition Heuristik und Metaheuristik].
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Im Softwareprojekt sollten verschiedene Metaheuristik generisch implementiert
+ werden, damit sie anschließend für das Stapeln und Packen von Polygonen
+ verwendet werden können.
+ Außerdem sollten die Metaheuristiken während der Implementierungsphase
+ anhand einfacher Probleme getestet werden.
+ 
 \end_layout
 
 \begin_layout Subsection
 Arbeitsablauf
+\end_layout
+
+\begin_layout Standard
+Zu Beginn des Softwareprojekts stand die Recherche der ersten zu implementierend
+en Metaheuristik, dem Simulated Annealing.
+ Mit der weiteren Metaheuristik-Gruppe wurden diesbezüglich gemeinsame Schnittst
+ellen vereinbart und anschließend wurde eine erste Version von Simulated
+ Annealing implementiert.
+ Um die Implementierung zu testen, haben wir uns ein einfacheres (im Sinne
+ von einfacher zu implementieren) NP-schweres Problem ausgesucht, das Traveling
+ Salesman Problem (TSP).
+ Wir haben eine grafische Oberfläche (GUI) zum Testen der Metaheuristiken
+ entwickelt, die in der Lage ist, das TSP für einen festen, vorgegebenen
+ Graphen und dessen Lösung durch die Metaheuristik zu visualisieren.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Anschließend haben wir als weitere Metaheuristik zunächst einen genetischen
+ Algorithmus und anschließend eine weitere Variante von genetischen Algorithmen,
+ den 
+\emph on
+Insular Genetic Algorithm
+\emph default
+, implementiert.
+ Parallel zu den genetischen Algorithmen haben wir zusätzlich zwei schwarmbasier
+te Metaheuristiken implementiert: 
+\emph on
+Particle Swarm Optimization
+\emph default
+ und den Glühwürmchen Algorithmus (
+\emph on
+Firefly Algorithm
+\emph default
+).
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zum Ende des Softwareprojekts haben wir unseren Fokus auf die Anwendung
+ unserer implementierten Metaheuristiken gerichtet.
+ Wir haben die Metaheuristiken zunächst angewendet auf das Stapeln beliebiger
+ Polygone.
+ Zum Abschluss haben wir dann ebenfalls das Packen beliebiger Polygone mittels
+ Metaheuristiken implementiert und bis zum Ende des Softwareprojekts kontinuierl
+ich optimiert und erweitert.
 \end_layout
 
 \end_body

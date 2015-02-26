@@ -231,5 +231,24 @@ filename "Anhang/Anhang.lyx"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "Quellen/references"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
