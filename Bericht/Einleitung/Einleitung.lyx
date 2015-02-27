@@ -84,15 +84,34 @@ Motivation und Problemstellung
 
 \begin_layout Standard
 Das im Rahmen des Softwareprojekts untersuchte Stapeln und Packen von Polygonen
- ist bereits in der einfachsten Version NP-schwer [Scheithauer, Wottawa].
+ ist bereits in der einfachsten Version NP-schwer 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Scheithauer.2008,Wottawa.1996"
+
+\end_inset
+
+.
  Dies bedeutet, dass es sehr wahrscheinlich keinen Algorithmus gibt, der
  eine optimale Stapelung bzw.
  Packung für eine beliebige Anzahl von beliebigen Polygonen in polynomieller
  Zeit findet.
  Zur Approxmiation von optimalen Lösungen können allerdings Metaheuristiken
  verwendet werden.
- [TODO: Definition Heuristik und Metaheuristik].
- 
+ Bei einer Metaheuristik handelt es sich um ein Optimierungsverfahren, das
+ zunächst unabhängig von einem spezifischen Problem ist.
+ Die problembezogenen Teile des Algorithmus werden gekapselt und von einem
+ problemunabhängigen Algorithmus gesteuert.
+ Dies ist auch der Hauptunterschied zu einer gewöhnlichen Heuristik, die
+ oftmals komplett problembezogen ist.
+ Wie bei einer Heuristik auch ist das Ziel einer Metaheuristik die Suche
+ von nahezu optimalen Lösungen für ein Optimierungsproblem mit vertretbarem
+ Zeitaufwand.
+ Die durch die (Meta)heuristik gefundene Lösung muss allerdings nicht zwangsläuf
+ige auch eine zulässige Lösung sein.
+ Da es sich bei der Lösung lediglich um eine Aproximation handelt, muss
+ die gefundene Lösung auch nicht optimal sein.
+ [QUELLEN WÄREN GUT]
 \begin_inset Newline newline
 \end_inset
 
