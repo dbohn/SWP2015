@@ -79,6 +79,14 @@ Metaheuristiken
 \end_layout
 
 \begin_layout Standard
+Insgesamt wurden vier verschiedene Metaheuristiken implentiert, die im Folgenden
+ vorgestellt werden.
+ Jede Metaheuristik wurde generisch implementiert, so dass die Metaheuristiken
+ ohne Änderungen an dem eigentlichen Algorithmus für verschiedene Probleme
+ verwendet können.
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
 filename "SimulatedAnnealing.lyx"
@@ -122,6 +130,16 @@ filename "FireflyAlgorithm.lyx"
 \begin_inset CommandInset include
 LatexCommand input
 filename "NichtImplementiert.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Controller.lyx"
 
 \end_inset
 
