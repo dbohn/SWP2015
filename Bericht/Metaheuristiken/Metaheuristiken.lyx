@@ -79,8 +79,54 @@ Metaheuristiken
 \end_layout
 
 \begin_layout Standard
-Insgesamt wurden vier verschiedene Metaheuristiken implentiert, die im Folgenden
- vorgestellt werden.
+Wie bereits eingangs erwähnt handelt es sich bei einer Metaheuristik um
+ ein problemunabhängiges Verfahren zum Approximation von optimalen Lösungen
+ eines gegebenen Optimierungsproblems.
+ Unter Optimierung wird hier die Minimierung einer Zielfunktion 
+\begin_inset Formula $f:\, X\mapsto\mathbb{R}$
+\end_inset
+
+ verstanden, wobei 
+\begin_inset Formula $X$
+\end_inset
+
+ die Menge der Lösungen ist, d.h.
+ die Zielfunktion weißt jeder Lösung eine Güte zu.
+ Weiterhin arbeitet jede der implementierten Metaheuristiken mit mindestens
+ einer Überführungsfunktion 
+\begin_inset Formula $t:\, X\mapsto X$
+\end_inset
+
+, 
+\begin_inset Formula $t\left(x\right)=x'$
+\end_inset
+
+, hier und im Code 
+\emph on
+Mutator
+\emph default
+ genannt.
+ Ein Mutator erzeugt also aus einer vorhandenen Lösung 
+\begin_inset Formula $x$
+\end_inset
+
+ eine neue Lösung 
+\begin_inset Formula $x'$
+\end_inset
+
+.
+ Als Quelle von Nichtdeterminismus und somit zur Vergrößerung des Suchraums
+ muss im Mutator immer mindestens eine Zufallsentscheidung getroffen werden.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Insgesamt wurden vier verschiedene Metaheuristiken implementiert, die im
+ Folgenden vorgestellt werden.
  Jede Metaheuristik wurde generisch implementiert, so dass die Metaheuristiken
  ohne Änderungen an dem eigentlichen Algorithmus für verschiedene Probleme
  verwendet können.
