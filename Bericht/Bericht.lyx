@@ -4,8 +4,17 @@
 \begin_header
 \textclass scrartcl
 \begin_preamble
-\usepackage{txfonts}
+% use a Times font
+\renewcommand{\sfdefault}{phv}
+\renewcommand{\rmdefault}{ptm}
+\renewcommand{\ttdefault}{pcr}
+
+% math font
 \usepackage[T1]{fontenc}
+\usepackage{amsfonts}
+
+\addtokomafont{disposition}{\rmfamily}
+
 \usepackage[colorlinks,
 pdfpagelabels,
 pdfstartview = FitH,
@@ -233,6 +242,22 @@ filename "Anhang/Anhang.lyx"
 
 \begin_layout Standard
 \begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{gobble}
+\end_layout
+
 \end_inset
 
 

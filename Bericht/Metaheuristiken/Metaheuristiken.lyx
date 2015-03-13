@@ -86,11 +86,12 @@ Wie bereits eingangs erwähnt handelt es sich bei einer Metaheuristik um
 \begin_inset Formula $f:\, X\mapsto\mathbb{R}$
 \end_inset
 
- verstanden, wobei 
+ verstanden.
+ 
 \begin_inset Formula $X$
 \end_inset
 
- die Menge der Lösungen ist, d.h.
+ bezeichnet hierbei die Menge der Lösungen, d.h.
  die Zielfunktion weißt jeder Lösung eine Güte zu.
  Weiterhin arbeitet jede der implementierten Metaheuristiken mit mindestens
  einer Überführungsfunktion 
@@ -101,12 +102,12 @@ Wie bereits eingangs erwähnt handelt es sich bei einer Metaheuristik um
 \begin_inset Formula $t\left(x\right)=x'$
 \end_inset
 
-, hier und im Code 
+, die hier und im Code 
 \emph on
 Mutator
 \emph default
- genannt.
- Ein Mutator erzeugt also aus einer vorhandenen Lösung 
+ genannt wird.
+ Ein Mutator erzeugt aus einer vorhandenen Lösung 
 \begin_inset Formula $x$
 \end_inset
 

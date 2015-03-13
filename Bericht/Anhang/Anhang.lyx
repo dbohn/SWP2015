@@ -78,5 +78,511 @@
 Anhang
 \end_layout
 
+\begin_layout Subsection
+Simulated Annealing Pseudocode 
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Simulated-Annealing-Pseudocode"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "numbers=left,basicstyle={\ttfamily},tabsize=4,mathescape=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// Initialisiere x mit einer initialen Lösung
+\end_layout
+
+\begin_layout Plain Layout
+
+x := initial solution
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// Cooling Schedule und Starttemperatur initialisieren
+\end_layout
+
+\begin_layout Plain Layout
+
+cs := new CoolingSchedule()
+\end_layout
+
+\begin_layout Plain Layout
+
+t := cs.getT0()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// Simulated Annealing läuft solange ein Abbruchkriterium
+\end_layout
+
+\begin_layout Plain Layout
+
+// nicht erfüllt ist.
+ Dies kann beispielsweise eine feste 
+\end_layout
+
+\begin_layout Plain Layout
+
+// Anzahl von Schritten sein oder auch wenn sich die
+\end_layout
+
+\begin_layout Plain Layout
+
+// Lösung über mehrere Schritte nicht weiter verbessert.
+\end_layout
+
+\begin_layout Plain Layout
+
+while (stop criterion is not met){
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	// Durch Verändern der aktuellen Lösung unter Einbe-
+\end_layout
+
+\begin_layout Plain Layout
+
+	// ziehung des Zufalls eine neue Lösung erzeugen.
+\end_layout
+
+\begin_layout Plain Layout
+
+	// Die konkrete Mutation ist herbei problemabhängig.
+\end_layout
+
+\begin_layout Plain Layout
+
+	x* := mutate(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	// Akzeptiere x* wenn sie besser als x ist oder ansonsten
+\end_layout
+
+\begin_layout Plain Layout
+
+	// wende das Metropolis Kriterium an und akzeptiere ggf.
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (rand(0,1) <= acceptance_prob(x, x*)){
+\end_layout
+
+\begin_layout Plain Layout
+
+		x := x*
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	// Temperatur aktualisieren
+\end_layout
+
+\begin_layout Plain Layout
+
+	t := cs.getNextTemperature()
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+return x
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pseudocode für vereinfachtes homogenes Simulated Annealing 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Foidl.,VanLaarhoven.Oktober2000"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{alignat*}{2}
+\texttt{acceptance\_prob(x,x*)} & = & \begin{cases}
+1 & \text{falls }f\left(x*\right)<f\left(x\right)\\
+e^{-\frac{f\left(x*\right)-f\left(x\right)}{T}} & \text{\text{sonst}}
+\end{cases}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Annahme: 
+\begin_inset Formula $\texttt{rand(min,max)}$
+\end_inset
+
+ erzeugt gleichverteilte Zufallszahlen im Intervall 
+\begin_inset Formula $\left[\texttt{min},\texttt{max}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Implementierte Abkühlungskurven 
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Implementierte-Abkühlungskurven"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lineare Abkühlung 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Foidl."
+
+\end_inset
+
+: 
+\series default
+
+\begin_inset Formula $T(t)=T(0)\cdot\left(1-\frac{t}{N}\right)$
+\end_inset
+
+, wobei 
+\begin_inset Formula $N$
+\end_inset
+
+ die Anzahl der Schritte ist
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../Praesentation/assets/linear_cs.pdf
+	scale 25
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Lineare Abkühlung 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Logarithmische Abkühlung 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Banchs."
+
+\end_inset
+
+:
+\series default
+ 
+\begin_inset Formula $T(t)=T(0)\cdot\frac{\alpha}{\ln\left(1+t\right)}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\alpha>0\land\le1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../Praesentation/assets/logarithmic_cs.pdf
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Logarithmische Abkühlung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Geometrische Abkühlung 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Banchs."
+
+\end_inset
+
+:
+\series default
+ 
+\begin_inset Formula $T(t)=T(0)\cdot\alpha^{t}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\alpha<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../Praesentation/assets/geometric_cs.pdf
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Geometrische Abkühlung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Exponentielle Abkühlung 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Banchs."
+
+\end_inset
+
+: 
+\series default
+
+\begin_inset Formula $T(t)=T(0)\cdot e^{-\alpha\sqrt{t}}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\alpha>0\land\le1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../Praesentation/assets/exponential_cs.pdf
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Exponentielle Abkühlung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document

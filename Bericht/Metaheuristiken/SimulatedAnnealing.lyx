@@ -78,5 +78,149 @@
 Simulated Annealing
 \end_layout
 
+\begin_layout Standard
+Simulated Annealing ist motiviert durch Beobachtungen aus der Metallverarbeitung.
+ Zunächst wird das Metall stark erhitzt und anschließend sehr langsam abgekühlt.
+ Beim Abkühlungsprozess wird immer so lange gewartet, bis sich das thermische
+ Gleichgewicht eingestellt hat.
+ Als Resultats des langsame Abkühlens ordnen sich die Moleküle im Zustand
+ mit der geringstmöglichen Energie (dem Grundzustand) an 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Foidl."
+
+\end_inset
+
+.
+ Auf Grundlage dieser Beobachtung entwickelten Kirkpatrick et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kirkpatrick.1983"
+
+\end_inset
+
+ die entsprechende Metaheuristik, die algorithmisch den Abkühlprozess simuliert.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Besonderheit von Simulated Annealing im Vergleich zu einer lokalen Suche
+ wie beispielsweise Hill-Climbing-Algorithmen ist, dass im Laufe der Optimierung
+ auch schlechtere Lösungen mit einer gewissen Wahrscheinlichkeit akzeptiert
+ werden können 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kirkpatrick.1983,Bertsimas.1993,VanLaarhoven.Oktober2000"
+
+\end_inset
+
+.
+ Dies ist notwendig, um mögliche lokale Optima auch wieder verlassen zu
+ können.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bei der Implementierung haben wir uns für einen vereinfachten, auf der homogenen
+ Variante
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Beim homogenen Simulated Annealing wird die Temperatur bei der Annäherung
+ an das Gleichgewicht konstant gehalten 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "VanLaarhoven.Oktober2000"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ von Simulated Annealing basierenden Algorithmus entschieden (siehe Anhang
+ 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sub:Simulated-Annealing-Pseudocode"
+
+\end_inset
+
+).
+ Die Vereinfachung besteht darin, dass auf eine Annäherung an das Gleichgewicht
+ bei konstanter Temperatur verzichtet wurde.
+ Diese Vereinfachung wurde getroffen, um die Einstiegshürde zur Verwendung
+ von Metaheuristiken möglichst gering zu halten, da anderenfalls noch weitere
+ Parameter berücksichtigt hätten werden müssen.
+\end_layout
+
+\begin_layout Subsubsection
+Cooling Schedules
+\end_layout
+
+\begin_layout Standard
+Der dominierende Faktor beim Simulated Annealing ist die Abkühlungskurve
+ (
+\emph on
+Cooling Schedule
+\emph default
+) .
+ Das Cooling Schedule beschreibt die Änderung der Temperatur über die Zeit
+ und bestimmt somit maßgeblich das Simulated Annealing.
+ Ein Cooling Schedule besteht aus einer Starttemperatur 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ und einer Regel, die angibt, wie sich die Temperatur von einem Zeitpunkt
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ zu dem darauffolgenden Zeitpunkt 
+\begin_inset Formula $n+1$
+\end_inset
+
+ verändert 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bookstaber."
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Grundsätzlich gibt es zwei verschiedene Arten von Cooling Schedules: statische
+ und dynamische Cooling Schedules.
+ Bei statischen Cooling Schedules werden alle Parameter vor der Ausführung
+ festgelegt und können währenddessen auch nicht mehr verändert werden, während
+ dies bei dynamischen Cooling Schedules möglich ist.
+ Wir haben uns entschieden, verschiedene statische Cooling Schedules für
+ die Verwendung durch andere Gruppen vorzuimplementieren.
+ Eine Übersicht über die implementierten Cooling Schedules befindet sich
+ im Anhang 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sub:Implementierte-Abkühlungskurven"
+
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
