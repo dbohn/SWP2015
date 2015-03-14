@@ -78,12 +78,205 @@
 Tests
 \end_layout
 
+\begin_layout Standard
+Neben der Implementierung der Metaheuristiken sollten die Metaheuristiken
+ auch anhand eines einfachen Problems getestet werden.
+ Wir haben uns entschieden, unsere Metaheuristiken anhand des Traveling
+ Salesman Problem (TSP) zu testen.
+ Diese Entscheidung haben wir unter anderem getroffen, weil das TSP als
+ Beispiel in vielen Publikationen zu Optimierungsverfahren (z.B.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bookstaber.,Braun.,Clerc.30.06.2000,Goldbarg.,Shi.b,Ucoluk."
+
+\end_inset
+
+) verwendet wird.
+ Außerdem lässt es sich leicht visualisieren und die gefundenen Lösungen
+ lassen sich als Konsequenz daraus ebenfalls gut manuell verifizieren.
+ 
+\end_layout
+
 \begin_layout Subsection
 Traveling Salesman Problem (TSP)
 \end_layout
 
+\begin_layout Standard
+Das Traveling Salesman Problem oder auch das Problem des Handlungsreisenden
+ bezeichnet im Wesentlichen die Problemstellung, dass ein Handlungsreisender
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ Städte jeweils genau einmal besuchen möchte und die kürzeste Route zwischen
+ den 
+\begin_inset Formula $n$
+\end_inset
+
+ Städten sucht.
+ Nachdem er in jeder Stadt war, möchte der Handlungsreisende wieder in die
+ Stadt zurückkehren, von der aus er gestartet ist.
+ Ausgehend von dieser Grundformulierung aus dem Jahr 
+\begin_inset Formula $1930$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Greco.2008."
+
+\end_inset
+
+ haben sich im Laufe der Zeit viele verschiedene Varianten entwickelt.
+ Wir haben uns bei dem Test auf das klassische symmetrische TSP beschränkt,
+ bei dem für jeweils zwei Städte 
+\begin_inset Formula $A$
+\end_inset
+
+ und 
+\begin_inset Formula $B$
+\end_inset
+
+ der Weg von 
+\begin_inset Formula $A$
+\end_inset
+
+ nach 
+\begin_inset Formula $B$
+\end_inset
+
+ genauso lang ist wie für 
+\begin_inset Formula $B$
+\end_inset
+
+ nach 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Das TSP lässt sich mathematisch modellieren auf Grundlage eines gewichteten,
+ ungerichteten Graphen.
+ Die Knoten des Graphen entsprechen dabei den Städten und die Kanten repräsentie
+ren die Verbindungen zwischen den Städten.
+ Die Kantengewichte entsprechen der Distanz der durch die Kante verbundenen
+ Städte.
+ Eine Tour und somit auch eine mögliche Lösung des TSP ist dann ein Kreis
+ in diesem Graphen, der jeden Knoten genau einmal enthält.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ein weiterer Grund für die Auswahl von TSP als Testproblem war die Tatsache,
+ dass die hier beschriebene Optimierungsversion des TSP NP-schwer ist.
+ Dies ist insofern von Vorteil, da auch das Packen von Polygonen NP-schwer
+ ist und wir so bei der Implementierung in einem kleineren Umfang bereits
+ Erfahrungen im Umgang mit NP-schweren Optimierungsproblemen sammeln konnten.
+\end_layout
+
 \begin_layout Subsection
-Test-GUI für die Metaheuristiken
+Test der Metaheuristiken
+\end_layout
+
+\begin_layout Standard
+Für jede Metaheuristik haben wir als Test die problemspezifischen Komponenten
+ für das TSP implementiert.
+ Während sich die meisten Komponenten jeweils unterscheiden, ist die Zielfunktio
+n immer dieselbe.
+ Die Zielfunktion, die es zu minimieren gilt, ist die Summe der Kantengewichte
+ (Distanzen) einer Tour.
+ Für Simulated Annealing musste außerdem ein Mutator implementiert werden
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bookstaber."
+
+\end_inset
+
+, der eine neue Tour durch Vertauschen zweier zufälliger Städte aus einer
+ bestehenden Lösung erzeugt.
+ 
+\series bold
+\color red
+Was musste bei genetischen Algorithmen konkret implementiert werden?
+\series default
+ 
+\color inherit
+Für PSO musste neben dem bereits beschriebenen Mutator noch ein zusätzlicher
+ binärer Mutator implementiert werden, der eine Tour einer anderen Tour
+ annähert.
+ Hier wurden drei verschiedene Varianten implementiert: One-Point-Crossover
+ (OPC), Partially-Matched-Crossover (PMX) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Helwig.2014"
+
+\end_inset
+
+ und eine adaptive Variante 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Goldbarg."
+
+\end_inset
+
+.
+ 
+\series bold
+\color red
+Firefly Algorithmus?
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zur Visualisierung der Lösung des TSP durch die Metaheuristiken haben wir
+ eine grafische Oberfläche implementiert, anhand derer die Lösung nachvollzogen
+ werden kann (Anhang 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Test-GUI-zur-Visualisierung"
+
+\end_inset
+
+).
+ Neben der Visualisierung des Graphen können auch noch spezifische Parameter
+ für die Metaheuristiken eingestellt werden und so mit den Parametern experiment
+iert werden (Anhang 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "GUI-Parameter"
+
+\end_inset
+
+).
+ Die Knoten sind der Übersichtlichkeit halber in einem Gitter angeordnet,
+ wobei die Distanz zwischen zwei adjazenten Knoten immer 
+\begin_inset Formula $1$
+\end_inset
+
+ ist.
+ Für eine Testinstanz von 
+\begin_inset Formula $10\times10$
+\end_inset
+
+ Städten bedeutet dies beispielsweise eine optimale Weglänge von 
+\begin_inset Formula $100$
+\end_inset
+
+.
 \end_layout
 
 \end_body
