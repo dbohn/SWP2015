@@ -79,13 +79,172 @@ Particle Swarm Optimization
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-\color red
-\begin_inset Formula $1$
+Bei 
+\emph on
+Particle Swarm Optimization
+\emph default
+ (PSO) handelt es sich ebenfalls um eine Metaheuristik, die von Prozessen
+ aus der Natur inspiriert wurde.
+ PSO wurde 
+\begin_inset Formula $1995$
 \end_inset
 
- Seite
+ von Kennedy und Eberhart konzipiert 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kennedy.1995"
+
+\end_inset
+
+ und basiert auf der Beobachtung des Verhaltens von Vogel- bzw.
+ Fischschwärmen: In einem Schwarm handeln alle Individuen in ihrem eigenen
+ Interesse und dennoch entsteht eine Schwarmintelligenz.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dieses Verhalten lässt sich reduzieren und vereinfachen auf drei wesentliche
+ Operationen: Mittels Evaluation ist jedes Individuum ist in der Lage seine
+ aktuelle Position bzw.
+ seinen aktuellen Zustand auszuwerten.
+ Außerdem kann sich jedes Individuum mit den anderen Individuen vergleichen
+ in Bezug auf seine Position.
+ Zusätzlich kann jedes Individuum aus der Evaluation und dem Vergleich Konsequen
+zen ziehen, indem es (entsprechend kontextabhängig) gute Verhaltensweisen
+ anderer Individuen imitiert 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Melchior."
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Abstrahiert man von den Individiuen im Schwarm gelangt man zu dem Konzept
+ der Partikel.
+ Jeder Partikel repräsentiert eine mögliche Lösung des Problems und hat
+ genau die beschriebenen drei Eigenschaften bzw.
+ ist in der Lage diese Operationen auszuführen.
+ Die Evaluation erfolgt mittels einer Zielfunktion, der Vergleich und die
+ Imitation finden sich in der Berechnung der Geschwindigkeit wieder.
+ Bei dieser Geschwindigkeit handelt es sich um eine eigene Geschwindigkeit,
+ mit der er sich jeder Partikel individuell im Suchraum bewegt.
+ Außerdem ist jeder Partikel in der Lage, sich seine jemals beste erreichte
+ Position zu speichern.
+ In jedem Schritt des Algorithmus verändert jeder Partikel seine Position
+ (Pseudocode Anhang 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Particle-Swarm-Optimization"
+
+\end_inset
+
+).
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der Algorithmus arbeitet mit einem Partikel-Schwarm, d.h.
+ einer Menge von Partikeln (i.d.R.
+ zwischen 20-40 Partikeln 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Melchior."
+
+\end_inset
+
+).
+ Zu Beginn werden alle Partikel mit einer zufälligen Lösung initialisiert,
+ die dann auch der eigenen bisher besten Position entspricht.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+PSO bietet die Möglichkeit, Partikel in Nachbarschaften zu unterteilen 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kennedy.1995"
+
+\end_inset
+
+.
+ Jeder Partikel wird bei Initialisierung des Algorithmus einer festen Nachbarsch
+aft zugeordnet.
+ Die Partikel einer Nachbarschaft können dabei über den gesamten Suchraum
+ verteilt sein.
+ Jeder Partikel orientiert sich an dem Optimum aus seiner Nachbarschaft
+ und der Algorithmus wählt wiederum das Optimum der Optimas aus.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Essentiell für PSO ist die Geschwindigkeitsberechnung, d.h.
+ die Bestimmung einer neuen Position für jeden Partikel.
+ Die Geschwindigkeit lässt sich also interpretieren als eine Mutation der
+ aktuellen Position.
+ Jeder Partikel berechnet seine neue Position dabei individuell und kann
+ dabei auch eigene Entscheidungen treffen.
+ Jeder Partikel hat drei Möglichkeiten zur Bestimmung seiner neuen Position:
+ Lokale Suche, Orientierung an dem eigenen erreichten Optimum oder Orientierung
+ an dem globalen Optimum.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Auwahl der Möglichkeit kann als Zufallsentscheidung implementiert werden.
+ Gängig sind aber auch Lernfaktoren 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Goldbarg.,Shi.b,Shi."
+
+\end_inset
+
+, hierbei werden im Laufe der Zeit die Wahrscheinlichkeiten für die Auswahl
+ der Möglichkeiten verändert: Anfänglich bewegt sich jeder Partikel mit
+ hoher Wahrscheinlichkeit zunächst selbstständig , im Laufe der Zeit sinkt
+ die Wahrscheinlichkeit für die erste Möglichkeit und die zweite und dritte
+ Möglichkeit gewinnen an Bedeutung
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+An dieser Stelle wurde eine Vereinfachung durch die disjunkten Auswählmöglichkei
+ten getroffen um die Implementierung einfacher zu gestalten.
+ Im ursprünglichen Algorithmus 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kirkpatrick.1983,Goldbarg."
+
+\end_inset
+
+ fliessen alle drei Möglichkeiten gewichtet in die Geschwindigkeit ein.
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \end_body

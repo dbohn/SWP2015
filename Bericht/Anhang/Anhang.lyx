@@ -158,7 +158,7 @@ t := cs.getT0()
 
 \begin_layout Plain Layout
 
-while (stop criterion is not met){
+while (stop criterion is not satisfied){
 \end_layout
 
 \begin_layout Plain Layout
@@ -582,6 +582,243 @@ Exponentielle Abkühlung
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Particle Swarm Optimization Pseudocode 
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Particle-Swarm-Optimization"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "numbers=left,basicstyle={\small\ttfamily},tabsize=4,mathescape=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// Schwarm und Nachbarschaften initialisieren
+\end_layout
+
+\begin_layout Plain Layout
+
+Initialize population of particles
+\end_layout
+
+\begin_layout Plain Layout
+
+Initialize and add particles to neighbourhoods
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// Globales Minimum
+\end_layout
+
+\begin_layout Plain Layout
+
+globalBest = null
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+while (stop criterion is not satisfied){
+\end_layout
+
+\begin_layout Plain Layout
+
+	for each neighbourhood n{
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		// Jeden Partikel der Nachbarschaft betrachten
+\end_layout
+
+\begin_layout Plain Layout
+
+		for each particle p{
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\end_layout
+
+\begin_layout Plain Layout
+
+			// Geschwindigkeit berechnen und auf Partikel anwenden
+\end_layout
+
+\begin_layout Plain Layout
+
+			// p.best ist die beste eigene erreichte Lösung und
+\end_layout
+
+\begin_layout Plain Layout
+
+			// n.best die beste Lösung der Nachbarschaft
+\end_layout
+
+\begin_layout Plain Layout
+
+			p.position = compute_velocity(p.position, p.best, n.best)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+			// Ggf.
+ die beste eigene Position aktualisieren
+\end_layout
+
+\begin_layout Plain Layout
+
+			if (f(p.position) < f(p.best)){
+\end_layout
+
+\begin_layout Plain Layout
+
+				p.best = p.position
+\end_layout
+
+\begin_layout Plain Layout
+
+			}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+			// Besten Wert der Nachbarschaft aktualisieren
+\end_layout
+
+\begin_layout Plain Layout
+
+			if (f(p.position) < f(n.best)){
+\end_layout
+
+\begin_layout Plain Layout
+
+				n.best = p.position
+\end_layout
+
+\begin_layout Plain Layout
+
+			}
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		// Globales Optimum aus allen Nachbarschaften aktualisieren
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (f(n.best) < f(globalBest)){
+\end_layout
+
+\begin_layout Plain Layout
+
+			globalBest = n.best
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pseudocode für Particle Swarm Optimization (nach 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kennedy.1995,Melchior.,Goldbarg."
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+Hier eventuell noch PSO Grafiken aus Präsentation einfügen
 \end_layout
 
 \begin_layout Standard

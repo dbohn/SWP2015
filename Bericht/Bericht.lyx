@@ -198,6 +198,26 @@ filename "Anwendung/Anwendung.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Seitenumbruch nur zur Darstellung solange kein Text da ist!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
 filename "Weiteres/Weiteres.lyx"
