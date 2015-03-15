@@ -78,5 +78,70 @@
 Stapeln beliebiger Polygone
 \end_layout
 
+\begin_layout Standard
+Beim Stapeln werden zunächst alle Polygone im Nullpunkt über ihrem Flächenschwer
+punkt gestapelt.
+ Diese Stapelung bildet die initiale Lösung, die anschließend von der Metaheuris
+tik mittels der Mutator optimiert wird.
+ Alle Metaheuristiken benötigen mindestens einen einfachen Mutator, d.h.
+ einen Mutator, der aus einer Lösung 
+\begin_inset Formula $x$
+\end_inset
+
+ durch Veränderung eine neue Lösung 
+\begin_inset Formula $x'$
+\end_inset
+
+ erzeugt.
+ Da wir uns für das Stapeln unter Rotation und ohne Translation entschieden
+ haben, besteht die Mutation im einfachen Mutator darin, eine zufällig große
+ Teilfolge der Polygone zu rotieren.
+ Jedes Polygon aus der Teilfolge wird dabei um einen zufälligen großen Winkel
+ 
+\begin_inset Formula $\alpha\in\left[-180\text{°},180\text{°}\right]$
+\end_inset
+
+ rotiert (Anhang 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einfacher-Stapel-Mutator"
+
+\end_inset
+
+).
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die zweite Art von Mutator, die bis auf Simulated Annealing von allen Metaheuris
+tiken verwendet ist, ist ein 
+\emph on
+binärer Mutator.
+ 
+\emph default
+Diese Art von Mutator erhält zwei Lösungen und erzeugt aus diesen beiden
+ Lösungen eine neue Lösung.
+ Dabei soll die schlechtere an die bessere Lösung angenähert werden.
+ Realisiert wird dies durch Kopieren einer Teilmenge der Polygone (minimal
+ 
+\begin_inset Formula $1$
+\end_inset
+
+ Polygon, maximal die Hälfte aller Polygone) der besseren Lösung in die
+ schlechtere Lösung (Anhang 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Binärer-Stapel-Mutator"
+
+\end_inset
+
+).
+ 
+\end_layout
+
 \end_body
 \end_document

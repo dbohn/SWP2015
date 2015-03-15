@@ -79,6 +79,27 @@ Anwendung der Metaheuristiken
 \end_layout
 
 \begin_layout Standard
+Zusätzlich zu der generischen Implementierung der Metaheuristiken haben
+ wir die Metaheuristiken auch auf das konkrete Problem des Stapeln und Packens
+ von Polygonen angewendet.
+ Optimiert werden kann in beiden Fällen wahlweise die Fläche der konvexen
+ Hülle, die Fläche der Bounding Box oder die Fläche der achsenparallelen
+ Bounding Box.
+ Um die Metaheuristiken auf das Stapeln bzw.
+ Packen anzuwenden, ist neben der Zielfunktion auch noch die Implementierung
+ eines oder mehrerer problemspezifischer Mutator nötig, die vorhandene Lösungen
+ unter Einbeziehung des Zufalls verändern und so neue Lösungen erzeugen.
+ Im Folgenden werden die Mutator vorgestellt, die für das Stapeln und Packen
+ implementiert wurden.
+ Diese Mutator werden (gegebenfalls mit Anpassungen) in allen Metaheuristiken
+ verwendet.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
 filename "Stapeln.lyx"

@@ -720,5 +720,124 @@ Auswahl der Metaheuristik und Einstellungsmöglichkeiten für spezifische
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Funktionsweise der Stapel- und Pack-Mutator
+\end_layout
+
+\begin_layout Subsubsection
+Einfacher Stapel Mutator 
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Einfacher-Stapel-Mutator"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../Praesentation/assets/StackMutator.pdf
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mutation durch Rotation von drei Polygonen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Binärer Stapel Mutator 
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Binärer-Stapel-Mutator"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Luca/Desktop/SWP2015/Praesentation/assets/StackCopyCrossover.pdf
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Annäherung der schlechteren Lösung 
+\begin_inset Formula $a$
+\end_inset
+
+ an die bessere Lösung 
+\begin_inset Formula $b$
+\end_inset
+
+ durch Kopieren der farbig markierten Polygone aus 
+\begin_inset Formula $b$
+\end_inset
+
+ in die neue Lösung 
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
