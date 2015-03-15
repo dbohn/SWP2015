@@ -78,5 +78,44 @@
 Export
 \end_layout
 
+\begin_layout Standard
+Die Export Funktionalität ermöglicht es, die aktuell angezeigte Polygongruppe
+ in einem wählbarem Grafikformat zur Weiterverwendung außerhalb des Programms
+ zu exportieren.
+ Der Export umfasst dabei nicht nur die Polygone selbst, sondern auch die
+ konvexe Hülle und die Bounding Boxen können exportiert werden.
+ Als Formate stehen das SVG-Format für den Export als Vektorgrafik sowie
+ JPEG und PNG für den Export als Pixelgrafik zur Verfügung.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bei einer Scalable Vector Graphic (SVG) handelt es sich um ein XML-basiertes
+ Format für Vektorgrafiken.
+ Um die Polygongruppe als SVG-Datei zu exportieren, wird zunächst eine neue
+ XML-Datei mit den entsprechenden SVG-Tags angelegt.
+ Dann werden die Abmessungen der Polygongruppe bestimmt.
+ Anschließend wird für jedes Polygon das entsprechende SVG-Polygon generiert.
+ Abschließend werden dann noch ggf.
+ die konvexe Hülle und die Bounding Boxen als Polygone eingefügt.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für Pixelgrafiken funktionieren die Schritte analog, nur dass hier mit einem
+ 
+\begin_inset Formula $\texttt{BufferedImage}$
+\end_inset
+
+ aus der Java Standard-Bibliothek gearbeitet wird, die ebenfalls dann das
+ Speichern in das gewünschte Format übernimmt.
+\end_layout
+
 \end_body
 \end_document

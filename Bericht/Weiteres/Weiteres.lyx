@@ -79,6 +79,16 @@ Weiteres
 \end_layout
 
 \begin_layout Standard
+Wir haben uns als Gruppe im Rahmen des Softwareprojekts nicht nur mit Metaheuris
+tiken und deren Anwendung beschäftigt, sondern haben auch versucht, das
+ Softwareprojekt als Ganzes voran zu bringen.
+ Im Zuge dessen haben wir zwei Aufgaben übernommen, die nicht in Zusammenhang
+ mit unserem eigentlichen Themengebiet standen: die Erkennung und der Import
+ von Polygonen aus Pixelgrafiken und den Export von Polygonen in eine Vektor-
+ oder Pixelgrafik.
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
 filename "Polygonerkennung.lyx"
