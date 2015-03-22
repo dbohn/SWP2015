@@ -1,4 +1,4 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
+﻿#LyX 2.1 created this file. For more info see http://www.lyx.org/
 \lyxformat 474
 \begin_document
 \begin_header
@@ -231,10 +231,12 @@ key "Goldbarg."
 \end_inset
 
 .
- 
-\series bold
-\color red
-Firefly Algorithmus?
+
+Für den Firefly Algorithmus wurde ebenfalls ein zusätzlicher binärer Mutator
+ zur Annäherung von zwei Lösungen benötigt und exemplarisch als TSPApproachMutat
+or implementiert.
+
+
 \begin_inset Newline newline
 \end_inset
 
