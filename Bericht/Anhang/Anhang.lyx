@@ -849,7 +849,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/Luca/Desktop/SWP2015/Praesentation/assets/tsp_gui2.png
+	filename ../../Praesentation/assets/tsp_gui2.png
 	scale 50
 
 \end_inset
@@ -888,7 +888,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/Luca/Desktop/SWP2015/Praesentation/assets/tsp_gui3.png
+	filename ../../Praesentation/assets/tsp_gui3.png
 	scale 50
 
 \end_inset
@@ -1035,7 +1035,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/Luca/Desktop/SWP2015/Praesentation/assets/StackCopyCrossover.pdf
+	filename ../../Praesentation/assets/StackCopyCrossover.pdf
 	scale 60
 
 \end_inset
