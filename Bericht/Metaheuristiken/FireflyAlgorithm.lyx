@@ -84,7 +84,15 @@ Der
 Firefly Algorithmus
 \shape default
  ist eine weitere Metaheuristik, die auf Beobachtungen in der Natur basiert.
- Er wurde 2008 von Xin-She Yang beschrieben.[?]
+ Er wurde 2008 von Xin-She Yang beschrieben.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Yang.2008"
+
+\end_inset
+
+(S.
+ 79-89)
 \end_layout
 
 \begin_layout Standard
@@ -107,7 +115,14 @@ Das Leuchten eines Glühwürmchen dient in der Natur primär zum Anlocken von
 
 \begin_layout Standard
 Um die Erkenntnisse aus der Natur in einen Algorithmus zu übersetzen, werden
- zunächst nach Xin-She Yang drei Annahmen getroffen:[?]
+ zunächst nach Xin-She Yang drei Annahmen getroffen:
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Yang.2010"
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -132,7 +147,7 @@ Gibt es in der Umgebung eines Glühwürmchens keine helleren Glühwürmchen,
 \end_layout
 
 \begin_layout Standard
-Diese drei Annahmen werdem in Vorschriften für den Algorithmus umgewandelt:[?]
+Diese drei Annahmen werdem in Vorschriften für den Algorithmus umgewandelt:
 \end_layout
 
 \begin_layout Enumerate
@@ -184,12 +199,9 @@ Die Lösung mit höchster Güte wird als momentan bestes Ergebnis gespeichert.
 \end_layout
 
 \begin_layout Standard
-Außerdem wird ein Absorptionskoeffizient 
-\begin_inset Formula $\alpha$
-\end_inset
-
- initialisiert, der den Einfluss der Abweichung zweier Lösungen voneinander
- auf die Annäherungsentscheidung bestimmt.
+Außerdem wird ein Absorptionskoeffizient initialisiert, der den Einfluss
+ der Abweichung zweier Lösungen voneinander auf die Annäherungsentscheidung
+ bestimmt.
 \end_layout
 
 \begin_layout Standard
