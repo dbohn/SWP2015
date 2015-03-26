@@ -78,5 +78,146 @@
 Genetische Algorithmen
 \end_layout
 
+\begin_layout Standard
+Wie bereits genannt sind Metaheuristiken oftmals an natürlichen Prozessen
+ orientiert.
+\end_layout
+
+\begin_layout Standard
+Dies trifft ebenfalls auf die im folgenden vorgestellte Metaheuristik, die
+ Genetischen Algorithmen, zu.
+\end_layout
+
+\begin_layout Standard
+Die Genetischen Algorithmen orientieren sich am biologischen Evolutionsprozess.
+\end_layout
+
+\begin_layout Standard
+Zum Zeitpunkt 
+\begin_inset Formula $t_{o}$
+\end_inset
+
+ existiert eine Population von Zuständen, um die Verbindung zur Evolution
+ zu erhalten nehmen wir z.B.
+ Menschen an.
+ Mathematisch gesehen, ist eine Population nichts anderes als eine Menge.
+\end_layout
+
+\begin_layout Standard
+Im Laufe der Zeit verändert sich diese Population durch Kreuzung und Mutation.
+\end_layout
+
+\begin_layout Standard
+Diese Vorgänge repräsentieren die 
+\emph on
+Überführungsfunktionen
+\emph default
+ der Genetischen Algorithmen.
+\end_layout
+
+\begin_layout Standard
+Die Kreuzung ist eine Funktion der Form 
+\begin_inset Formula $c:X\times X\longmapsto X$
+\end_inset
+
+, sie generiert also aus zwei Zuständen unserer Population einen neuen Zustand,
+ der eine zufällige Kombination verschiedener Eigenschaften der Elternzustände
+ darstellt.
+\end_layout
+
+\begin_layout Standard
+Neben dieser Art der Entwicklung gibt es noch die Möglichkeit, dass sich
+ ein Zustand selbst durch Mutation verändert.
+ Diese Überführungsfunktion ist der Überführungsfunktion des Simulating
+ Annealing nicht nur ähnlich, sondern sogar gleich.
+ D.h.
+ diese kann übernommen werden.
+\end_layout
+
+\begin_layout Standard
+Es werden also zufällig Mutationen nach einer der beiden Überführungsfunktionen
+ angeregt, bis die Population eine kritische (konfigurierbare) Größe erreicht.
+\end_layout
+
+\begin_layout Standard
+Bei erreichen dieser Größe muss die Population wieder zusammenschrumpfen.
+ Auch dieser Vorgang ist der Natur entnommen und ist als 
+\begin_inset Quotes pld
+\end_inset
+
+Survival of the fittest
+\begin_inset Quotes prd
+\end_inset
+
+ (dt.
+ Überleben des Stärkeren) bekannt.
+\end_layout
+
+\begin_layout Standard
+In diesem Schritt werden die vorhandenen Zustände selektiert und eine neue
+ Population erstellt.
+ Die Selektion ist in unserer Implementierung dem Nutzer des Algorithmus
+ überlassen.
+ Ziel jeder Strategie sollte es aber meistens sein, die mittlere Fitness
+ (d.h.
+ das Mittel der Fitness eines jeden Zustands) möglichst gering zu halten.
+\end_layout
+
+\begin_layout Subsubsection
+Insular Genetic Algorithm
+\end_layout
+
+\begin_layout Standard
+Bei der Verwendung der Genetischen Algorithmen fällt sehr schnell auf, dass
+ zu Beginn der Ausführung eine hohe Varianz in den Ergebnissen existiert,
+ aber bereits nach kurze Zeit sich die Fitness aber schnell nur noch geringfügig
+ verbessert.
+ [QUELLE] schlägt daher einen modifizierten Ansatz vor, den wir im Rahmen
+ des Projekts ebenfalls umgesetzt haben.
+ Anstatt lediglich eine Population sich entwickeln zu lassen, teilt man
+ die Startpopulationen 
+\begin_inset Formula $X$
+\end_inset
+
+ in disjunkte Teilmengen 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ auf, so dass 
+\begin_inset Formula $\cap_{i}X_{i}=\emptyset$
+\end_inset
+
+ und 
+\begin_inset Formula $\cup_{i}X_{i}=X$
+\end_inset
+
+.
+ Nun führt man für jedes 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ den klassischen genetischen Algorithmus aus.
+ Sobald die einzelnen Teilmengen keine oder nur wenige neue Ergebnisse produzier
+en, d.h.
+ die Teilmenge 
+\begin_inset Quotes pld
+\end_inset
+
+degeneriert
+\begin_inset Quotes prd
+\end_inset
+
+ ist, tauscht man zufällig Zustände der verschiedenen Teilmengen untereinander
+ aus, so dass wieder neue Varianz hinzukommt, die eine weitere Optimierung
+ der Populationen anregen kann.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+TODO: Quellen raussuchen und hinzufügen
+\end_layout
+
 \end_body
 \end_document

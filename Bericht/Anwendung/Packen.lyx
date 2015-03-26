@@ -79,13 +79,67 @@ Packen beliebiger Polygone
 \end_layout
 
 \begin_layout Standard
+Analog zum Stapeln werden auch beim Packen zunächst alle Polygone über ihrem
+ Flächenschwerpunkt im Ursprung gestapelt.
+ Dies hat den Vorteil, dass alle Polygone bereits sehr nah beieinander sind
+ und nicht erst einander angenähert werden müssen.
+\end_layout
 
-\series bold
-\color red
-\begin_inset Formula $\frac{1}{2}$
+\begin_layout Standard
+Dieser Zustand ist natürlich im Endeffekt ein ungültiger Zustand, da das
+ Packen eben keine Überlappungen zulässt, also übergeben wir diesen Zustand
+ an unsere Metaheuristiken.
+\end_layout
+
+\begin_layout Standard
+Auch hier benötigen wir nun wieder zwei Mutator-Klassen.
+ Der unäre Mutator ist relativ simpel.
+ Er nimmt sich einfach jedes Polygon eines Zustandes und bewegt diese eine
+ zufällige, nach oben begrenzte Weite in einem zufälligen Winkel von der
+ aktuellen Position weg.
+ Zusätzlich kann man auch noch eine Rotation der Polygone hinzufügen (Anhang
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einfacher-Pack-Mutator"
+
 \end_inset
 
- Seite
+).
+\end_layout
+
+\begin_layout Standard
+Der zweite Mutator ist analog zum Stapeln der binäre Mutator.
+ Dieser erhält zwei Lösungen, aus denen er eine neue erzeugt, indem die
+ schlechtere Lösung an die bessere angenähert wird.
+ Dies geschieht ebenfalls durch Kopieren einer Teilmenge der Polygone der
+ besseren Lösung in die schlechtere Lösung.
+\end_layout
+
+\begin_layout Standard
+Das besondere an dieser Implementierung ist jedoch die Zielfunktion bzw.
+ Fitness-Funktion.
+ Wie vielleicht schon bemerkt wurde, haben wir bisher bewusst noch nicht
+ auf Überlappungen in den Zuständen reagiert.
+\end_layout
+
+\begin_layout Standard
+Diese werden erst von der Zielfunktion bestraft.
+ Das heißt, wenn es Überlappungen gibt, wird das Ergebnis der Zielfunktion
+ um frei wählbare Werte verschlechtert, wie z.B.
+ durch Addition der Größe der Bounding Box oder der Konvexen Hülle.
+\end_layout
+
+\begin_layout Standard
+Dies führt dazu, dass am Ende in der Regel irgendein Zustand ohne Überlappung,
+ der sogar eine ziemlich gute Fitness hat, zurückgegeben wird (Anhang 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Binärer-Pack-Mutator"
+
+\end_inset
+
+).
 \end_layout
 
 \end_body

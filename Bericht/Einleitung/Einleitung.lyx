@@ -92,7 +92,7 @@ key "Scheithauer.2008,Wottawa.1996"
 \end_inset
 
 .
- Dies bedeutet, dass es sehr wahrscheinlich keinen Algorithmus gibt, der
+ Dies bedeutet, dass es nach heutigem Wissen keinen Algorithmus gibt, der
  eine optimale Stapelung bzw.
  Packung für eine beliebige Anzahl von beliebigen Polygonen in polynomieller
  Zeit findet.
@@ -137,9 +137,9 @@ en Metaheuristik, dem Simulated Annealing.
  Mit der weiteren Metaheuristik-Gruppe wurden diesbezüglich gemeinsame Schnittst
 ellen vereinbart und anschließend wurde eine erste Version von Simulated
  Annealing implementiert.
- Um die Implementierung zu testen, haben wir uns ein einfacheres (im Sinne
- von einfacher zu implementieren) NP-schweres Problem ausgesucht, das Traveling
- Salesman Problem (TSP).
+ Um die Implementierung zu testen, haben wir uns ein leicht zu visualisierendes
+ NP-schweres Problem ausgesucht, das Traveling Salesman Problem (TSP), das
+ sich gut für die Anwendung von Metaheuristiken eignet.
  Wir haben eine grafische Oberfläche (GUI) zum Testen der Metaheuristiken
  entwickelt, die in der Lage ist, das TSP für einen festen, vorgegebenen
  Graphen und dessen Lösung durch die Metaheuristik zu visualisieren.
@@ -158,8 +158,8 @@ Anschließend haben wir als weitere Metaheuristik zunächst einen genetischen
 Insular Genetic Algorithm
 \emph default
 , implementiert.
- Parallel zu den genetischen Algorithmen haben wir zusätzlich zwei schwarmbasier
-te Metaheuristiken implementiert: 
+ Parallel dazu haben wir ebenfalls zwei schwarmbasierte Metaheuristiken
+ implementiert: 
 \emph on
 Particle Swarm Optimization
 \emph default

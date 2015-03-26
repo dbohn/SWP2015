@@ -87,12 +87,12 @@ Zusätzlich zu der generischen Implementierung der Metaheuristiken haben
  Bounding Box.
  Um die Metaheuristiken auf das Stapeln bzw.
  Packen anzuwenden, ist neben der Zielfunktion auch noch die Implementierung
- eines oder mehrerer problemspezifischer Mutator nötig, die vorhandene Lösungen
- unter Einbeziehung des Zufalls verändern und so neue Lösungen erzeugen.
- Im Folgenden werden die Mutator vorgestellt, die für das Stapeln und Packen
- implementiert wurden.
- Diese Mutator werden (gegebenfalls mit Anpassungen) in allen Metaheuristiken
- verwendet.
+ einer oder mehrerer problemspezifischer Mutator-Klassen nötig, die vorhandene
+ Lösungen unter Einbeziehung des Zufalls verändern und so neue Lösungen
+ erzeugen.
+ Im Folgenden werden die Mutator-Klassen vorgestellt, die für das Stapeln
+ und Packen implementiert wurden.
+ Diese werden (gegebenfalls mit Anpassungen) in allen Metaheuristiken verwendet.
 \begin_inset Newline newline
 \end_inset
 

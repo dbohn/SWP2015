@@ -137,23 +137,23 @@ t := cs.getT0()
 
 \begin_layout Plain Layout
 
-// Simulated Annealing läuft solange ein Abbruchkriterium
+// Simulated Annealing läuft, solange ein Abbruchkriterium
 \end_layout
 
 \begin_layout Plain Layout
 
 // nicht erfüllt ist.
- Dies kann beispielsweise eine feste 
+ Dieses kann beispielsweise eine feste 
 \end_layout
 
 \begin_layout Plain Layout
 
-// Anzahl von Schritten sein oder auch wenn sich die
+// Anzahl von Schritten oder auch eine über mehrere
 \end_layout
 
 \begin_layout Plain Layout
 
-// Lösung über mehrere Schritte nicht weiter verbessert.
+// Schritte ausbleibende Verbesserung der Lösung sein.
 \end_layout
 
 \begin_layout Plain Layout
@@ -167,17 +167,17 @@ while (stop criterion is not satisfied){
 
 \begin_layout Plain Layout
 
-	// Durch Verändern der aktuellen Lösung unter Einbe-
+	// Erzeugung einer neuen Lösung durch Veränderung 
 \end_layout
 
 \begin_layout Plain Layout
 
-	// ziehung des Zufalls eine neue Lösung erzeugen.
+	// der aktuellen Lösung unter Einbeziehung des Zufalls.
 \end_layout
 
 \begin_layout Plain Layout
 
-	// Die konkrete Mutation ist herbei problemabhängig.
+	// Die konkrete Mutation ist hierbei problemabhängig.
 \end_layout
 
 \begin_layout Plain Layout
@@ -191,12 +191,12 @@ while (stop criterion is not satisfied){
 
 \begin_layout Plain Layout
 
-	// Akzeptiere x* wenn sie besser als x ist oder ansonsten
+	// Akzeptiere x*, wenn sie besser als x ist, ansonsten
 \end_layout
 
 \begin_layout Plain Layout
 
-	// wende das Metropolis Kriterium an und akzeptiere ggf.
+	// wende das Metropolis-Kriterium an und akzeptiere ggf.
 \end_layout
 
 \begin_layout Plain Layout
@@ -251,7 +251,7 @@ return x
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Pseudocode für vereinfachtes homogenes Simulated Annealing 
+Pseudocode des vereinfachten homogenen Simulated Annealing 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Foidl.,VanLaarhoven.Oktober2000"
@@ -655,7 +655,7 @@ while (stop criterion is not satisfied){
 
 \begin_layout Plain Layout
 
-	for each neighbourhood n{
+	for each neighbourhood n {
 \end_layout
 
 \begin_layout Plain Layout
@@ -669,7 +669,7 @@ while (stop criterion is not satisfied){
 
 \begin_layout Plain Layout
 
-		for each particle p{
+		for each particle p {
 \end_layout
 
 \begin_layout Plain Layout
@@ -794,7 +794,7 @@ while (stop criterion is not satisfied){
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Pseudocode für Particle Swarm Optimization (nach 
+Pseudocode der Particle Swarm Optimization (nach 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Kennedy.1995,Melchior.,Goldbarg."
@@ -928,11 +928,17 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 
 \series bold
 \color red
-An David: Bitte nochmal einen Screenshot machen von dem Fenster und hier
- einbinden damit es konsistent ist ;)
+\begin_inset Graphics
+	filename ../../Praesentation/assets/tsp_gui_settings.png
+	width 60col%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1064,6 +1070,98 @@ Annäherung der schlechteren Lösung
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Einfacher Pack Mutator 
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Einfacher-Pack-Mutator"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../Praesentation/assets/PackMutator.pdf
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mutation durch Translation und Rotation von zwei Polygonen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Binärer Pack Mutator
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Binärer-Pack-Mutator"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../Praesentation/assets/PackCopyCrossover.pdf
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Annäherung der beiden Lösungen durch Kopie einer Teilmenge von Polygonen
 \end_layout
 
 \end_inset

@@ -89,6 +89,37 @@ Für 2.5 und 2.6 insgesamt 1 Seite
 Ameisenalgorithmus
 \end_layout
 
+\begin_layout Standard
+Der Ameisenalgorithmus orientiert sich am Verhalten von Ameisenkolonien
+ bei der Futtersuche.
+\end_layout
+
+\begin_layout Standard
+Dabei einigen sich diese auf den (womöglich) kürzesten Weg zwischen dem
+ zu transportierenden Futter und ihrem Bau mittels Pheromonspuren.
+\end_layout
+
+\begin_layout Standard
+In der Informatik stellen wir uns dazu eine Graphenstruktur vor, die zwei
+ Punkte, Bau und Futter, über beliebig viele Knoten und Kanten verbindet.
+ Der Algorithmus konstruiert nun über simulierte Duftspuren einen möglichst
+ kurzen Weg, wie ihn auch die Ameisen finden würden.
+\end_layout
+
+\begin_layout Standard
+Aber recht schnell wurde klar, dass dieser Algorithmus für unsere Probleme
+ nicht geeignet ist, da er eben einen diskreten Suchraum, nämlich den Entscheidu
+ngsgraphen, voraussetzt, den wir für unsere Probleme des Stapeln und Packen
+ von Polygonen nicht konstruieren konnten.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+TODO: Quellifizieren
+\end_layout
+
 \begin_layout Subsubsection
 Scatter Search
 \end_layout

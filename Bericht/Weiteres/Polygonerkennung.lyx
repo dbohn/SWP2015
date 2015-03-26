@@ -79,13 +79,43 @@ Polygonerkennung
 \end_layout
 
 \begin_layout Standard
+Um die Algorithmen mit echten Daten, z.B.
+ Schnittmuster aus der Textilindustrie, zu testen, war es nötig, ein Vefahren
+ zum Import von Bilddaten zu implementieren.
+\end_layout
 
-\series bold
-\color red
-\begin_inset Formula $\frac{1}{2}$
-\end_inset
+\begin_layout Standard
+Da die meisten dieser Daten als Pixelgrafiken zu finden waren, haben wir
+ ein Tool geschrieben, das in Pixelgrafiken nach Polygonen sucht und diese
+ in die Polygon-Datenstruktur übersetzt.
+\end_layout
 
- Seite
+\begin_layout Standard
+Dafür sind die folgenden Schritte notwendig:
+\end_layout
+
+\begin_layout Enumerate
+Umwandlung des Bildes in Graufstufen
+\end_layout
+
+\begin_layout Enumerate
+Schwellenwert-Korrektur zur Ausfilterung von nichtsichtbaren Informationen
+\end_layout
+
+\begin_layout Enumerate
+Anwendung eines Algorithmus zur Erkennung von Konturen
+\end_layout
+
+\begin_layout Enumerate
+Approximation eines Polygons aus den Konturpunkten mittels des Douglas-Peucker-A
+lgorithmus
+\end_layout
+
+\begin_layout Standard
+Da diese Algorithmen ziemlich rechenaufwändig sind und die genaue Umsetzung
+ der Algorithmen nicht Thema dieses Projekts war, haben wir die obigen Schritte
+ mit der Computer-Vision-Bibliothek OpenCV umgesetzt, die der de facto-Standard
+ für solche Anwendungen ist.
 \end_layout
 
 \end_body
