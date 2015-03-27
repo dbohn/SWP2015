@@ -79,7 +79,62 @@ Steuerung der Metaheuristiken
 \end_layout
 
 \begin_layout Standard
+Die Ausführung der Metaheuristiken kann mittels sogenannter generischer
+ 
+\emph on
+Controller
+\emph default
+ gesteuert werden.
+ Die Verwendung von Controllern wird dadurch motiviert, dass alle Metaheuristike
+n iterationsbasiert sind und die Iteration an einem bestimmten Punkt abgebrochen
+ werden muss.
+ Die Überwachung dieses Abbruchkriteriums ist die erste und zugleich wichtigste
+ Aufgabe der Controller.
+ Der Controller muss zu Beginn jeder Iteration entscheiden, ob diese durchgeführ
+t werden soll.
+ Anhand welcher Kriterien diese Entscheidung gefällt wird, ist abhängig
+ von dem konkreten Controller.
+ Dem Controller wird nach jeder Iteration die aktuell beste gefundene Lösung
+ übergeben, die dann in die Entscheidung miteinbezogen werden kann.
+\begin_inset Newline newline
+\end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+Die Controller bieten neben der Funktion als Abbruchkriterium auch noch
+ die Möglichkeit, direkt in den Algorithmus einzugreifen und den Algorithmus
+ zu manipulieren.
+ Dies bedeutet konkret, dass der Controller die Lösung unabhängig von der
+ Metaheuristik verändern kann.
+ Ein Anwendungsgebiet wäre beispielsweise bei populations- oder schwarmbasierten
+ Metaheuristiken das Ersetzen der schlechtesten Lösungen durch neue zufällige
+ Lösungen um so die Wahrscheinlichkeit zu vergrößern, eine gute Lösung zu
+ finden.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wir haben insgesamt drei verschiedene Controller für die Verwendung vorimplement
+iert.
+ Die implementierten Controller machen keinen Gebrauch von der Möglichkeit
+ die Ausführung zu manipulieren, stattdessen dienen sie lediglich als Abbruchkri
+terium.
+ Für alle Metaheuristiken haben wir einen Fixed Length Controller implementiert,
+ der die Metaheuristik für eine feste Anzahl von Schritten ausführt.
+ Desweiteren haben wir einen Stuck Terminate Controller implementiert für
+ Simulated Annealing implementiert, der die Metaheuristik so lange ausführt
+ bis sich über mehrere Schritte die Lösung nicht weiter verbessert.
+ Der dritte Controller, der Target Fitness Controller, ist eher experimenteller
+ Natur und führt die Metaheuristik so lange aus, bis die gefundene Lösung
+ eine gewisse Güte erreicht hat.
+ Dies ist insofern problematisch, da es unter Umständen dazu kommen kann,
+ dass die Metaheuristik eine Lösung der Mindestgüte nicht findet oder nicht
+ finden kann und somit die Metaheuristik nicht terminiert.
 \end_layout
 
 \end_body
