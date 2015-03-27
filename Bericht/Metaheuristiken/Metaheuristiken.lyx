@@ -130,7 +130,7 @@ Insgesamt wurden vier verschiedene Metaheuristiken implementiert, die im
  Folgenden vorgestellt werden.
  Jede Metaheuristik wurde generisch implementiert, so dass die Metaheuristiken
  ohne Änderungen an dem eigentlichen Algorithmus für verschiedene Probleme
- verwendet können.
+ verwendet werden können.
 \end_layout
 
 \begin_layout Standard

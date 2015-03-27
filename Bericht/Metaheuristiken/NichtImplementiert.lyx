@@ -124,5 +124,28 @@ TODO: Quellifizieren
 Scatter Search
 \end_layout
 
+\begin_layout Standard
+Der Scatter Search Algorithmus arbeitet auf zufällig generierten Referenzgruppen
+ von Lösungen für ein Problem.
+\end_layout
+
+\begin_layout Standard
+Es wird zunächst versucht diese zu verbessern, um sie anschließend in Untergrupp
+en zu unterteilen und dann über Linearkombination neue Lösungen zu generieren.
+\end_layout
+
+\begin_layout Standard
+Da die Umsetzung einige sehr komplexe Funktionen beinhaltet und wir den
+ daraus resultierenden Mehrwert für das Projekt als gering eingeschätzt
+ haben, haben wir uns gegen eine Implementierung entschieden.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+TODO: Quellifizieren
+\end_layout
+
 \end_body
 \end_document
