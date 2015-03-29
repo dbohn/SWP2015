@@ -188,13 +188,6 @@ filename "Tests/Tests.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
 filename "Anwendung/Anwendung.lyx"

@@ -101,17 +101,23 @@ key "Scheithauer.2008,Wottawa.1996"
  Bei einer Metaheuristik handelt es sich um ein Optimierungsverfahren, das
  zunächst unabhängig von einem spezifischen Problem ist.
  Die problembezogenen Teile des Algorithmus werden gekapselt und von einem
- problemunabhängigen Algorithmus gesteuert.
+ problemunabhängigen generischen Algorithmus gesteuert.
  Dies ist auch der Hauptunterschied zu einer gewöhnlichen Heuristik, die
  oftmals komplett problembezogen ist.
- Wie bei einer Heuristik auch ist das Ziel einer Metaheuristik die Suche
+ Wie auch bei einer Heuristik ist das Ziel einer Metaheuristik die Suche
  von nahezu optimalen Lösungen für ein Optimierungsproblem mit vertretbarem
  Zeitaufwand.
  Die durch die (Meta)heuristik gefundene Lösung muss allerdings nicht zwangsläuf
-ige auch eine zulässige Lösung sein.
+ig auch eine zulässige Lösung sein.
  Da es sich bei der Lösung lediglich um eine Approximation handelt, muss
- die gefundene Lösung auch nicht optimal sein.
- [QUELLEN WÄREN GUT]
+ die gefundene Lösung somit auch nicht optimal sein 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Domschke.2006"
+
+\end_inset
+
+.
 \begin_inset Newline newline
 \end_inset
 

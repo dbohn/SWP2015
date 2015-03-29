@@ -1141,7 +1141,7 @@ name "sub:Binärer-Pack-Mutator"
 
 \begin_layout Standard
 \begin_inset Float figure
-placement h
+placement H
 wide false
 sideways false
 status open
@@ -1171,6 +1171,10 @@ Annäherung der beiden Lösungen durch Kopie einer Teilmenge von Polygonen
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
