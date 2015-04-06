@@ -87,7 +87,7 @@ Neben der Implementierung der Metaheuristiken sollten die Metaheuristiken
  Beispiel in vielen Publikationen zu Optimierungsverfahren ( 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Bookstaber.,Braun.,Clerc.30.06.2000,Goldbarg.,Shi.b,Ucoluk."
+key "Bookstaber.,Braun.,Clerc.30.06.2000,Goldbarg.,Shi.,Ucoluk."
 
 \end_inset
 
@@ -204,14 +204,17 @@ key "Bookstaber."
 
 , der eine neue Tour durch Vertauschen zweier zufälliger Städte aus einer
  bestehenden Lösung erzeugt.
+ Der genetische Algorithmus verwendet neben dem Mutator noch eine Crossover-Impl
+ementierung, die zwei Touren stückweise zu einer neuen zusammenfügt, siehe
  
-\series bold
-\color red
-Was musste bei genetischen Algorithmen konkret implementiert werden?
-\series default
- 
-\color inherit
-Für PSO musste neben dem bereits beschriebenen Mutator noch ein zusätzlicher
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Braun."
+
+\end_inset
+
+.
+ Für PSO musste neben dem bereits beschriebenen Mutator noch ein zusätzlicher
  binärer Mutator implementiert werden, der eine Tour einer anderen Tour
  annähert.
  Hier wurden drei verschiedene Varianten implementiert: One-Point-Crossover
@@ -229,6 +232,7 @@ key "Goldbarg."
 
 \end_inset
 
+
 .
  Für den Firefly Algorithmus wurde ebenfalls ein zusätzlicher binärer Mutator
  zur Annäherung von zwei Lösungen benötigt und exemplarisch als 
@@ -236,6 +240,7 @@ key "Goldbarg."
 TSPApproachMutator
 \emph default
  implementiert.
+
 \begin_inset Newline newline
 \end_inset
 
