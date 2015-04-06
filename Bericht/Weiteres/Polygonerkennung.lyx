@@ -114,8 +114,11 @@ lgorithmus
 \begin_layout Standard
 Da diese Algorithmen ziemlich rechenaufwändig sind und die genaue Umsetzung
  der Algorithmen nicht Thema dieses Projekts war, haben wir die obigen Schritte
- mit der Computer-Vision-Bibliothek OpenCV umgesetzt, die der de facto-Standard
- für solche Anwendungen ist.
+ mit der Computer-Vision-Bibliothek 
+\emph on
+OpenCV
+\emph default
+ umgesetzt, die der de facto-Standard für solche Anwendungen ist.
 \end_layout
 
 \end_body

@@ -158,8 +158,7 @@ reference "sub:Particle-Swarm-Optimization"
 
 \begin_layout Standard
 Der Algorithmus arbeitet mit einem Partikel-Schwarm, d.h.
- einer Menge von Partikeln (i.d.R.
- zwischen 20-40 Partikeln 
+ einer Menge von Partikeln (in der Regel zwischen 20-40 Partikeln 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Melchior."
@@ -168,7 +167,7 @@ key "Melchior."
 
 ).
  Zu Beginn werden alle Partikel mit einer zufälligen Lösung initialisiert,
- die dann auch der eigenen bisher besten Position entspricht.
+ die dann initial auch der eigenen bisher besten Position entspricht.
 \begin_inset Newline newline
 \end_inset
 
@@ -213,7 +212,7 @@ Essentiell für PSO ist die Geschwindigkeitsberechnung, d.h.
 \end_layout
 
 \begin_layout Standard
-Die Auwahl der Möglichkeit kann als Zufallsentscheidung implementiert werden.
+Die Auswahl der Möglichkeit kann als Zufallsentscheidung implementiert werden.
  Gängig sind aber auch Lernfaktoren 
 \begin_inset CommandInset citation
 LatexCommand cite

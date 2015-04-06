@@ -79,68 +79,70 @@ Genetische Algorithmen
 \end_layout
 
 \begin_layout Standard
-Wie bereits genannt sind Metaheuristiken oftmals an natürlichen Prozessen
- orientiert.
+Wie bereits erwähnt sind Metaheuristiken oftmals an natürlichen Prozessen
+ orientiert, dies trifft ebenfalls auf die im folgenden vorgestellte Metaheurist
+ik, die Genetischen Algorithmen, zu.
+ Der natürliche Prozess der hier als Vorbild für die Genetischen Algorithmen
+ dient, ist der biologische Evolutionsprozess.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Dies trifft ebenfalls auf die im folgenden vorgestellte Metaheuristik, die
- Genetischen Algorithmen, zu.
-\end_layout
-
-\begin_layout Standard
-Die Genetischen Algorithmen orientieren sich am biologischen Evolutionsprozess.
-\end_layout
-
-\begin_layout Standard
-Zum Zeitpunkt 
-\begin_inset Formula $t_{o}$
+Wie beim biologischen Evolutionsprozess auch werden hier Populationen betrachtet.
+ Mathematisch betrachtet ist eine Population nichts anderes als eine Menge.
+ Zum Zeitpunkt 
+\begin_inset Formula $t_{0}$
 \end_inset
 
  existiert eine Population von Zuständen, um die Verbindung zur Evolution
  zu erhalten nehmen wir z.B.
  Menschen an.
- Mathematisch gesehen, ist eine Population nichts anderes als eine Menge.
+ Im Laufe der Zeit verändert sich diese Population durch Kreuzung und Mutation.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Im Laufe der Zeit verändert sich diese Population durch Kreuzung und Mutation.
-\end_layout
-
-\begin_layout Standard
-Diese Vorgänge repräsentieren die 
+Diese Vorgänge werden repräsentiert durch eine 
 \emph on
 Überführungsfunktionen
 \emph default
- der Genetischen Algorithmen.
-\end_layout
-
-\begin_layout Standard
-Die Kreuzung ist eine Funktion der Form 
+, die bei den Genetischen Algorithmen verwendet wird.
+ Die Kreuzung ist eine Funktion der Form 
 \begin_inset Formula $c:X\times X\longmapsto X$
 \end_inset
 
-, sie generiert also aus zwei Zuständen unserer Population einen neuen Zustand,
+.
+ Sie generiert also aus zwei Zuständen unserer Population einen neuen Zustand,
  der eine zufällige Kombination verschiedener Eigenschaften der Elternzustände
  darstellt.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Neben dieser Art der Entwicklung gibt es noch die Möglichkeit, dass sich
  ein Zustand selbst durch Mutation verändert.
- Diese Überführungsfunktion ist der Überführungsfunktion des Simulating
- Annealing nicht nur ähnlich, sondern sogar gleich.
- D.h.
+ Diese Überführungsfunktion ist identisch mit der beim Simulated Annealing
+ verwendeten Überführungsfunktion, d.h.
  diese kann übernommen werden.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Es werden also zufällig Mutationen nach einer der beiden Überführungsfunktionen
  angeregt, bis die Population eine kritische (konfigurierbare) Größe erreicht.
-\end_layout
-
-\begin_layout Standard
-Bei erreichen dieser Größe muss die Population wieder zusammenschrumpfen.
+ Bei Erreichen dieser Größe muss die Population wieder zusammenschrumpfen.
  Auch dieser Vorgang ist der Natur entnommen und ist als 
 \begin_inset Quotes pld
 \end_inset
@@ -151,10 +153,7 @@ Survival of the fittest
 
  (dt.
  Überleben des Stärkeren) bekannt.
-\end_layout
-
-\begin_layout Standard
-In diesem Schritt werden die vorhandenen Zustände selektiert und eine neue
+ In diesem Schritt werden die vorhandenen Zustände selektiert und eine neue
  Population erstellt.
  Die Selektion ist in unserer Implementierung dem Nutzer des Algorithmus
  überlassen.
@@ -172,7 +171,14 @@ Bei der Verwendung der Genetischen Algorithmen fällt sehr schnell auf, dass
  zu Beginn der Ausführung eine hohe Varianz in den Ergebnissen existiert,
  aber bereits nach kurze Zeit sich die Fitness aber schnell nur noch geringfügig
  verbessert.
- [QUELLE] schlägt daher einen modifizierten Ansatz vor, den wir im Rahmen
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+[QUELLE] schlägt daher einen modifizierten Ansatz vor, den wir im Rahmen
  des Projekts ebenfalls umgesetzt haben.
  Anstatt lediglich eine Population sich entwickeln zu lassen, teilt man
  die Startpopulationen 
@@ -197,8 +203,16 @@ Bei der Verwendung der Genetischen Algorithmen fällt sehr schnell auf, dass
 \end_inset
 
  den klassischen genetischen Algorithmus aus.
- Sobald die einzelnen Teilmengen keine oder nur wenige neue Ergebnisse produzier
-en, d.h.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sobald die einzelnen Teilmengen keine oder nur wenige neue Ergebnisse produziere
+n, d.h.
  die Teilmenge 
 \begin_inset Quotes pld
 \end_inset

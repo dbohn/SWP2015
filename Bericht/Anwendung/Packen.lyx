@@ -131,7 +131,7 @@ Diese werden erst von der Zielfunktion bestraft.
 \end_layout
 
 \begin_layout Standard
-Dies führt dazu, dass am Ende in der Regel irgendein Zustand ohne Überlappung,
+Dies führt dazu, dass am Ende in der Regel ein Zustand ohne Überlappung,
  der sogar eine ziemlich gute Fitness hat, zurückgegeben wird (Anhang 
 \begin_inset CommandInset ref
 LatexCommand ref

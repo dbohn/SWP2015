@@ -108,7 +108,8 @@ key "Scheithauer.2008,Wottawa.1996"
  von nahezu optimalen Lösungen für ein Optimierungsproblem mit vertretbarem
  Zeitaufwand.
  Die durch die (Meta)heuristik gefundene Lösung muss allerdings nicht zwangsläuf
-ig auch eine zulässige Lösung sein.
+ig auch eine zulässige bzw.
+ gültige Lösung sein.
  Da es sich bei der Lösung lediglich um eine Approximation handelt, muss
  die gefundene Lösung somit auch nicht optimal sein 
 \begin_inset CommandInset citation
@@ -125,7 +126,7 @@ key "Domschke.2006"
 \end_layout
 
 \begin_layout Standard
-Im Softwareprojekt sollten verschiedene Metaheuristik generisch implementiert
+Im Softwareprojekt sollten verschiedene Metaheuristiken generisch implementiert
  werden, damit sie anschließend für das Stapeln und Packen von Polygonen
  verwendet werden können.
  Außerdem sollten die Metaheuristiken während der Implementierungsphase
@@ -143,9 +144,11 @@ en Metaheuristik, dem Simulated Annealing.
  Mit der weiteren Metaheuristik-Gruppe wurden diesbezüglich gemeinsame Schnittst
 ellen vereinbart und anschließend wurde eine erste Version von Simulated
  Annealing implementiert.
- Um die Implementierung zu testen, haben wir uns ein leicht zu visualisierendes
- NP-schweres Problem ausgesucht, das Traveling Salesman Problem (TSP), das
- sich gut für die Anwendung von Metaheuristiken eignet.
+ Um die Implementierung zu testen, haben wir uns ein leicht verständliches
+ und zu visualisierendes NP-schweres Problem ausgesucht, das Traveling Salesman
+ Problem (TSP).
+ Weil TSP ebenfalls NP-schwer ist, eignet es sich gut für die Anwendung
+ von Metaheuristiken.
  Wir haben eine grafische Oberfläche (GUI) zum Testen der Metaheuristiken
  entwickelt, die in der Lage ist, das TSP für einen festen, vorgegebenen
  Graphen und dessen Lösung durch die Metaheuristik zu visualisieren.

@@ -78,13 +78,6 @@
 Nicht implementierte Metaheuristiken
 \end_layout
 
-\begin_layout Standard
-
-\series bold
-\color red
-Für 2.5 und 2.6 insgesamt 1 Seite
-\end_layout
-
 \begin_layout Subsubsection
 Ameisenalgorithmus
 \end_layout
@@ -92,24 +85,30 @@ Ameisenalgorithmus
 \begin_layout Standard
 Der Ameisenalgorithmus orientiert sich am Verhalten von Ameisenkolonien
  bei der Futtersuche.
-\end_layout
-
-\begin_layout Standard
-Dabei einigen sich diese auf den (womöglich) kürzesten Weg zwischen dem
+ Dabei einigen sich diese auf den (womöglich) kürzesten Weg zwischen dem
  zu transportierenden Futter und ihrem Bau mittels Pheromonspuren.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-In der Informatik stellen wir uns dazu eine Graphenstruktur vor, die zwei
- Punkte, Bau und Futter, über beliebig viele Knoten und Kanten verbindet.
+Übertragen auf ein algorithmisches Verfahren stellen wir uns dazu eine Graphenst
+ruktur vor, die zwei Punkte, Bau und Futter, über beliebig viele Knoten
+ und Kanten verbindet.
  Der Algorithmus konstruiert nun über simulierte Duftspuren einen möglichst
  kurzen Weg, wie ihn auch die Ameisen finden würden.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Aber recht schnell wurde klar, dass dieser Algorithmus für unsere Probleme
  nicht geeignet ist, da er eben einen diskreten Suchraum, nämlich den Entscheidu
-ngsgraphen, voraussetzt, den wir für unsere Probleme des Stapeln und Packen
+ngsgraphen, voraussetzt, den wir für unser Problem des Stapeln und Packen
  von Polygonen nicht konstruieren konnten.
 \end_layout
 
@@ -127,11 +126,12 @@ Scatter Search
 \begin_layout Standard
 Der Scatter Search Algorithmus arbeitet auf zufällig generierten Referenzgruppen
  von Lösungen für ein Problem.
-\end_layout
+ Es wird zunächst versucht diese zu verbessern, um sie anschließend in Untergrup
+pen zu unterteilen und dann über Linearkombination neue Lösungen zu generieren.
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
-Es wird zunächst versucht diese zu verbessern, um sie anschließend in Untergrupp
-en zu unterteilen und dann über Linearkombination neue Lösungen zu generieren.
+
 \end_layout
 
 \begin_layout Standard
