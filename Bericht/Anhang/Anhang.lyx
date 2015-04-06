@@ -815,10 +815,38 @@ key "Kennedy.1995,Melchior.,Goldbarg."
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
 
-\series bold
-\color red
-Hier eventuell noch PSO Grafiken aus Präsentation einfügen
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../Praesentation/assets/PSO_quer.pdf
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Visualisierung der Partikel im Suchraum in zwei Iterationen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1171,10 +1199,6 @@ Annäherung der beiden Lösungen durch Kopie einer Teilmenge von Polygonen
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 
 \end_layout
 
