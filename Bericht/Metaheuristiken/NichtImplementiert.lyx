@@ -78,13 +78,6 @@
 Nicht implementierte Metaheuristiken
 \end_layout
 
-\begin_layout Standard
-
-\series bold
-\color red
-Für 2.5 und 2.6 insgesamt 1 Seite
-\end_layout
-
 \begin_layout Subsubsection
 Ameisenalgorithmus
 \end_layout
@@ -104,6 +97,8 @@ In der Informatik stellen wir uns dazu eine Graphenstruktur vor, die zwei
  Punkte, Bau und Futter, über beliebig viele Knoten und Kanten verbindet.
  Der Algorithmus konstruiert nun über simulierte Duftspuren einen möglichst
  kurzen Weg, wie ihn auch die Ameisen finden würden.
+\color red
+[Hartl.2014]
 \end_layout
 
 \begin_layout Standard
@@ -111,13 +106,6 @@ Aber recht schnell wurde klar, dass dieser Algorithmus für unsere Probleme
  nicht geeignet ist, da er eben einen diskreten Suchraum, nämlich den Entscheidu
 ngsgraphen, voraussetzt, den wir für unsere Probleme des Stapeln und Packen
  von Polygonen nicht konstruieren konnten.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-TODO: Quellifizieren
 \end_layout
 
 \begin_layout Subsubsection
@@ -132,19 +120,14 @@ Der Scatter Search Algorithmus arbeitet auf zufällig generierten Referenzgruppe
 \begin_layout Standard
 Es wird zunächst versucht diese zu verbessern, um sie anschließend in Untergrupp
 en zu unterteilen und dann über Linearkombination neue Lösungen zu generieren.
+\color red
+[Marti.2003]
 \end_layout
 
 \begin_layout Standard
 Da die Umsetzung einige sehr komplexe Funktionen beinhaltet und wir den
  daraus resultierenden Mehrwert für das Projekt als gering eingeschätzt
  haben, haben wir uns gegen eine Implementierung entschieden.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-TODO: Quellifizieren
 \end_layout
 
 \end_body
