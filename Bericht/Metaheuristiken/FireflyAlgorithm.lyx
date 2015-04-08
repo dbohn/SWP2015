@@ -153,27 +153,15 @@ Ein Glühwürmchen ist eine Lösung für ein Problem.
 \begin_layout Enumerate
 Die Leuchtkraft des Glühwürmchens entspricht der Güte der Lösung bezüglich
  einer Zielfunktion.
- Lösungen mit geringerer Güte werden Lösungen mit größerer Güte angenähert.
+ Lösungen mit geringerer Güte werden Lösungen mit größerer Güte angenähert,
+ wenn sie sich nicht zu sehr unterscheiden.
 \begin_inset Newline newline
 \end_inset
 
-
-\series bold
-\color blue
-Die Güte einer Lösung nimmt mit zunehmender Abweichung (Distanz) einer anderen
- Lösung von ihr ab.
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Klingt für mich ein bisschen unglücklich formuliert, weil die Güte einer
- Lösung doch immer gleich bleibt, oder? Nur die Anziehungskraft nimmt ab,
- wenn ich das richtig verstanden habe? ~Luca
+Je größer der Unterschied bzw.
+ die Distanz zwischen zwei Lösungen ist, desto geringer ist die Wahrscheinlichke
+it, dass sie aneinander angenähert werden.
 \end_layout
-
-\end_inset
-
 
 \end_layout
 

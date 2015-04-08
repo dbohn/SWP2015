@@ -267,7 +267,7 @@ pagenumbering{gobble}
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintAll"
-bibfiles "Quellen/references"
+bibfiles "Quellen/references,Quellen/addition_references"
 options "plain"
 
 \end_inset

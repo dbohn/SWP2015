@@ -98,17 +98,15 @@ Der Ameisenalgorithmus orientiert sich am Verhalten von Ameisenkolonien
 ruktur vor, die zwei Punkte, Bau und Futter, über beliebig viele Knoten
  und Kanten verbindet.
  Der Algorithmus konstruiert nun über simulierte Duftspuren einen möglichst
- kurzen Weg, wie ihn auch die Ameisen finden würden.
-
- 
+ kurzen Weg, wie ihn auch die Ameisen finden würden 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Dorigo."
-
+key "Dorigo.,Hartl.2014"
 
 \end_inset
 
-
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -131,10 +129,11 @@ pen zu unterteilen und dann über Linearkombination neue Lösungen zu generieren
 \end_inset
 
 
+\end_layout
 
 \begin_layout Standard
 Es wird zunächst versucht diese zu verbessern, um sie anschließend in Untergrupp
-en zu unterteilen und dann über Linearkombination neue Lösungen zu generieren.
+en zu unterteilen und dann über Linearkombination neue Lösungen zu generieren
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -142,7 +141,8 @@ key "Marti.2003"
 
 \end_inset
 
-
+.
+ 
 \end_layout
 
 \begin_layout Standard
