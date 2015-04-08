@@ -84,7 +84,7 @@ Neben der Implementierung der Metaheuristiken sollten die Metaheuristiken
  Wir haben uns entschieden, unsere Metaheuristiken anhand des Traveling
  Salesman Problem (TSP) zu testen.
  Diese Entscheidung haben wir unter anderem getroffen, weil das TSP als
- Beispiel in vielen Publikationen zu Optimierungsverfahren ( 
+ Beispiel in vielen Publikationen zu Optimierungsverfahren (siehe 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Bookstaber.,Braun.,Clerc.30.06.2000,Goldbarg.,Shi.,Ucoluk."
@@ -232,7 +232,6 @@ key "Goldbarg."
 
 \end_inset
 
-
 .
  Für den Firefly Algorithmus wurde ebenfalls ein zusätzlicher binärer Mutator
  zur Annäherung von zwei Lösungen benötigt und exemplarisch als 
@@ -240,7 +239,6 @@ key "Goldbarg."
 TSPApproachMutator
 \emph default
  implementiert.
-
 \begin_inset Newline newline
 \end_inset
 

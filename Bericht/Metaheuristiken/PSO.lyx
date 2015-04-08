@@ -216,7 +216,7 @@ Die Auswahl der Möglichkeit kann als Zufallsentscheidung implementiert werden.
  Gängig sind aber auch Lernfaktoren 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Goldbarg.,Shi.b,Shi."
+key "Goldbarg.,Shi.,Kennedy.2001"
 
 \end_inset
 
