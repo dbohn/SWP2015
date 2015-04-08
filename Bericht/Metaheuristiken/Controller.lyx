@@ -124,14 +124,25 @@ iert.
  Die implementierten Controller machen keinen Gebrauch von der Möglichkeit
  die Ausführung zu manipulieren, stattdessen dienen sie lediglich als Abbruchkri
 terium.
- Für alle Metaheuristiken haben wir einen Fixed Length Controller implementiert,
- der die Metaheuristik für eine feste Anzahl von Schritten ausführt.
- Desweiteren haben wir einen Stuck Terminate Controller implementiert für
- Simulated Annealing implementiert, der die Metaheuristik so lange ausführt
- bis sich über mehrere Schritte die Lösung nicht weiter verbessert.
- Der dritte Controller, der Target Fitness Controller, ist eher experimenteller
- Natur und führt die Metaheuristik so lange aus, bis die gefundene Lösung
- eine gewisse Güte erreicht hat.
+ Für alle Metaheuristiken haben wir einen 
+\emph on
+Fixed Length Controller
+\emph default
+ implementiert, der die Metaheuristik für eine feste Anzahl von Schritten
+ ausführt.
+ Desweiteren haben wir einen 
+\emph on
+Stuck Terminate Controller
+\emph default
+ implementiert für Simulated Annealing implementiert, der die Metaheuristik
+ so lange ausführt bis sich über mehrere Schritte die Lösung nicht weiter
+ verbessert.
+ Der dritte Controller, der 
+\emph on
+Target Fitness Controller
+\emph default
+, ist eher experimenteller Natur und führt die Metaheuristik so lange aus,
+ bis die gefundene Lösung eine gewisse Güte erreicht hat.
  Dies ist insofern problematisch, da es unter Umständen dazu kommen kann,
  dass die Metaheuristik eine Lösung der Mindestgüte nicht findet oder nicht
  finden kann und somit die Metaheuristik nicht terminiert.

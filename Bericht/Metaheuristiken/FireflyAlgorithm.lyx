@@ -84,20 +84,20 @@ Der
 Firefly Algorithmus
 \shape default
  ist eine weitere Metaheuristik, die auf Beobachtungen in der Natur basiert.
- Er wurde 2008 von Xin-She Yang beschrieben.
+ Er wurde 2008 von Xin-She Yang beschrieben 
 \begin_inset CommandInset citation
 LatexCommand cite
+after "S. 79-89"
 key "Yang.2008"
 
 \end_inset
 
-(S.
- 79-89)
+.
 \end_layout
 
 \begin_layout Standard
-Beim Firefly Algorithmus wird das Verhalten einer Menge von Glühwürmchen
- als Grundlage verwendet.
+Beim Firefly Algorithmus wird das Verhalten einer Population bzw.
+ Menge von Glühwürmchen als Grundlage verwendet.
  Die Bewegung eines einzelnen Glühwürmchens wird dabei durch die Leuchtkraft
  der anderen Glühwürmchen beeinflusst.
 \begin_inset Newline newline
@@ -111,34 +111,29 @@ Das Leuchten eines Glühwürmchen dient in der Natur primär zum Anlocken von
  Partnern.
  Diese werden von dem Leuchten angezogen und bewegen sich auf die Lichtquelle
  zu.
-\end_layout
-
-\begin_layout Standard
-Um die Erkenntnisse aus der Natur in einen Algorithmus zu übersetzen, werden
- zunächst nach Xin-She Yang drei Annahmen getroffen:
+ Um die Erkenntnisse aus der Natur in einen Algorithmus zu übersetzen, werden
+ zunächst die folgenden Annahmen getroffen 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Yang.2010"
 
 \end_inset
 
- 
+:
 \end_layout
 
 \begin_layout Enumerate
-Das Geschlecht der Glühwürmchen spielt keine Rolle, jedes Glühwürmchen wird
- von jedem beliebigen anderen Glühwürmchen angezogen.
+Das Geschlecht der Glühwürmchen spielt keine Rolle.
+ Dies bedeutet, dass jedes Glühwürmchen von jedem beliebigen anderen Glühwürmche
+n angezogen werden kann
 \end_layout
 
 \begin_layout Enumerate
 Die Attraktivität eines Glühwürmchens verhält sich proportional zu seiner
  Leuchtkraft, ein schwächer leuchtendes Glühwürmchen wird sich immer zu
  einem heller leuchtenden Glühwürmchen bewegen.
-\begin_inset Newline newline
-\end_inset
-
-Die Leuchtkraft eines Glühwürmchens nimmt mit zunehmender Entfernung von
- ihm ab.
+ Daraus resultiert auch, dass die Leuchtkraft eines Glühwürmchens mit zunehmende
+r Entfernung von ihm abnimmt.
 \end_layout
 
 \begin_layout Enumerate
@@ -147,7 +142,8 @@ Gibt es in der Umgebung eines Glühwürmchens keine helleren Glühwürmchen,
 \end_layout
 
 \begin_layout Standard
-Diese drei Annahmen werdem in Vorschriften für den Algorithmus umgewandelt:
+Diese drei Annahmen werden übertragen auf Regeln, die im Algorithmus verwendet
+ werden:
 \end_layout
 
 \begin_layout Enumerate
@@ -167,23 +163,22 @@ Je größer der Unterschied bzw.
 it, dass sie aneinander angenähert werden.
 \end_layout
 
+\end_layout
+
 \begin_layout Enumerate
 Gibt es keine Lösungen größerer Güte in der Umgebung einer Lösung, wird
  diese zufällig verändert.
 \end_layout
 
 \begin_layout Standard
-Wir benötigen für den Algorithmus also drei Funktionen.
-\end_layout
-
-\begin_layout Standard
-Eine Funktion, um eine Lösung an eine Zweite anzunähern, eine weitere, um
- eine Lösung zufällig zu verändern und eine dritte, um die Abweichung bzw.
- Distanz zweier Lösungen zu berechnen.
-\end_layout
-
-\begin_layout Standard
-Diese Funktionen sind je nach Problem unterschiedlich und müssen deshalb
+Wir benötigen für den Algorithmus also drei Funktionen: Eine Funktion, um
+ eine Lösung an eine Zweite anzunähern.
+ Außerdem erneut eine Überführungsfunktion (oder Mutator), um eine Lösung
+ zufällig zu verändern.
+ Zusätzlich wird noch eine dritte Funktion benötigt, die die Abweichung
+ bzw.
+ Distanz zweier Lösungen berechnet.
+ Diese Funktionen sind je nach Problem unterschiedlich und müssen deshalb
  dem Problem angepasst werden.
 \begin_inset Newline newline
 \end_inset
@@ -193,17 +188,15 @@ Diese Funktionen sind je nach Problem unterschiedlich und müssen deshalb
 
 \begin_layout Standard
 Bei der Initialisierung des Algorithmus wird eine Menge von zufälligen Lösungen
- für das Problem generiert und ihre Güte berechnet.
-\end_layout
-
-\begin_layout Standard
-Die Lösung mit höchster Güte wird als momentan bestes Ergebnis gespeichert.
-\end_layout
-
-\begin_layout Standard
-Außerdem wird ein Absorptionskoeffizient initialisiert, der den Einfluss
+ für das Problem generiert und ihre Güte berechnet, die Lösung mit höchster
+ Güte wird als momentan bestes Ergebnis gespeichert.
+ Außerdem wird ein Absorptionskoeffizient initialisiert, der den Einfluss
  der Abweichung zweier Lösungen voneinander auf die Annäherungsentscheidung
  bestimmt.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -212,16 +205,10 @@ Daraufhin wird jede Lösung mit allen anderen Lösungen bezüglich ihrer Güte
  Dabei wird die Güte der anderen Lösungen um einen Faktor verringert, der
  von der Abweichung der zwei Lösungen voneinander und dem Absorptionskoeffizient
 en abhängt.
-\end_layout
-
-\begin_layout Standard
-Falls eine Lösung eine größere Güte besitzt, wird die Lösung mit geringerer
+ Falls eine Lösung eine größere Güte besitzt, wird die Lösung mit geringerer
  Güte an diese angenähert.
  Falls es keine solche Lösung gibt, wird die Lösung zufällig verändert.
-\end_layout
-
-\begin_layout Standard
-Anschließend wird die Güte der so entstandenen neuen Lösung berechnet.
+ Anschließend wird die Güte der so entstandenen neuen Lösung berechnet.
  Falls diese die Güte der derzeitig gespeicherten besten Lösung übersteigt,
  wird die neue Lösung als beste Lösung gespeichert.
 \begin_inset Newline newline
@@ -231,9 +218,9 @@ Anschließend wird die Güte der so entstandenen neuen Lösung berechnet.
 \end_layout
 
 \begin_layout Standard
-Das Vergleichen und Verändern der Lösungen wird wiederholt, bis eine bestimmte
- Anzahl von Iterationsschritten absolviert wurde oder eine andere, selbst
- definierte Abbruchbedingung eintritt.
+Das Vergleichen und Verändern der Lösungen wird solange wiederholt, bis
+ eine bestimmte Anzahl von Iterationsschritten erreicht wurde oder eine
+ andere, selbst definierbare Abbruchbedingung eintritt.
 \end_layout
 
 \end_body

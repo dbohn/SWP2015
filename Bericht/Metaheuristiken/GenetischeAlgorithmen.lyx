@@ -79,69 +79,103 @@ Genetische Algorithmen
 \end_layout
 
 \begin_layout Standard
-Wie bereits genannt sind Metaheuristiken oftmals an natürlichen Prozessen
+Wie bereits erwähnt sind Metaheuristiken oftmals an natürlichen Prozessen
  orientiert.
 \end_layout
 
 \begin_layout Standard
-Dies trifft ebenfalls auf die im folgenden vorgestellte Metaheuristik, die
- Genetischen Algorithmen, zu.
-\end_layout
-
-\begin_layout Standard
-Die Genetischen Algorithmen orientieren sich am biologischen Evolutionsprozess.
-\end_layout
-
-\begin_layout Standard
-Zum Zeitpunkt 
-\begin_inset Formula $t_{o}$
+So auch die im Folgenden vorgestellte Metaheuristik, die Genetischen Algorithmen
+, deren natürliches Vorbild der biologischen Evolutionsprozess ist.
+\begin_inset Newline newline
 \end_inset
 
- existiert eine Population von Zuständen, um die Verbindung zur Evolution
- zu erhalten nehmen wir z.B.
- Menschen an.
- Mathematisch gesehen, ist eine Population nichts anderes als eine Menge.
+
 \end_layout
 
 \begin_layout Standard
-Im Laufe der Zeit verändert sich diese Population durch Kreuzung und Mutation.
+Analog zum biologischen Evolutionsprozess gibt es jetzt nicht mehr nur einen
+ einzelnen Zustand, sondern ganze Populationen.
+ Mathematisch gesehen, ist für unsere Zwecke die Betrachtung einer Population
+ als Menge von Zuständen ausreichend.
+
 \end_layout
 
 \begin_layout Standard
-Diese Vorgänge repräsentieren die 
+Wie beim biologischen Evolutionsprozess auch werden hier Populationen betrachtet.
+ Mathematisch betrachtet ist eine Population nichts anderes als eine Menge.
+ Zum Zeitpunkt 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ existiert eine Population von Zuständen.
+ Um die Verbindung zur Evolution zu erhalten, nehmen wir z.B.
+ eine Gruppe von Menschen an.
+\end_layout
+
+\begin_layout Standard
+Im Laufe der Zeit verändert sich diese Population durch 
+\emph on
+Kreuzung
+\emph default
+ und 
+\emph on
+Mutation
+\emph default
+ der Zustände.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Diese Vorgänge werden durch die 
 \emph on
 Überführungsfunktionen
 \emph default
- der Genetischen Algorithmen.
+ der Genetischen Algorithmen repräsentiert.
 \end_layout
 
 \begin_layout Standard
 Die Kreuzung ist eine Funktion der Form 
+
 \begin_inset Formula $c:X\times X\longmapsto X$
 \end_inset
 
-, sie generiert also aus zwei Zuständen unserer Population einen neuen Zustand,
+.
+ Sie generiert also aus zwei Zuständen unserer Population einen neuen Zustand,
  der eine zufällige Kombination verschiedener Eigenschaften der Elternzustände
  darstellt.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Neben dieser Art der Entwicklung gibt es noch die Möglichkeit, dass sich
  ein Zustand selbst durch Mutation verändert.
- Diese Überführungsfunktion ist der Überführungsfunktion des Simulating
- Annealing nicht nur ähnlich, sondern sogar gleich.
- D.h.
+
+ Diese Überführungsfunktion ist äquivalent zur Überführungsfunktion des
+ Simulating Annealing, d.h.
+
  diese kann übernommen werden.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Es werden also zufällig Mutationen nach einer der beiden Überführungsfunktionen
  angeregt, bis die Population eine kritische (konfigurierbare) Größe erreicht.
+
 \end_layout
 
 \begin_layout Standard
-Bei erreichen dieser Größe muss die Population wieder zusammenschrumpfen.
- Auch dieser Vorgang ist der Natur entnommen und ist als 
+Bei Erreichen dieser Größe muss die Population wieder zusammenschrumpfen.
+ Auch dieser Vorgang ist der Natur entnommen und wird 
+
 \begin_inset Quotes pld
 \end_inset
 
@@ -150,17 +184,42 @@ Survival of the fittest
 \end_inset
 
  (dt.
- Überleben des Stärkeren) bekannt.
+
+ Überleben des Stärkeren) genannt 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Braun."
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 In diesem Schritt werden die vorhandenen Zustände selektiert und eine neue
+
  Population erstellt.
  Die Selektion ist in unserer Implementierung dem Nutzer des Algorithmus
  überlassen.
- Ziel jeder Strategie sollte es aber meistens sein, die mittlere Fitness
+ Ziel jeder Strategie sollte es aber in der Regel sein, die mittlere Fitness
  (d.h.
- das Mittel der Fitness eines jeden Zustands) möglichst gering zu halten.
+ das Mittel der Fitness eines jeden Zustands) möglichst weiter zu minimieren.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Unsere Implementierung orientiert sich am Pseudocode, der in 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "S. 139"
+key "Scheithauer.2008"
+
+\end_inset
+
+ präsentiert wird.
 \end_layout
 
 \begin_layout Subsubsection
@@ -170,12 +229,20 @@ Insular Genetic Algorithm
 \begin_layout Standard
 Bei der Verwendung der Genetischen Algorithmen fällt sehr schnell auf, dass
  zu Beginn der Ausführung eine hohe Varianz in den Ergebnissen existiert,
- aber bereits nach kurze Zeit sich die Fitness aber schnell nur noch geringfügig
+ aber bereits nach kurzer Zeit sich die Fitness schnell nur noch geringfügig
  verbessert.
- [QUELLE] schlägt daher einen modifizierten Ansatz vor, den wir im Rahmen
- des Projekts ebenfalls umgesetzt haben.
- Anstatt lediglich eine Population sich entwickeln zu lassen, teilt man
- die Startpopulationen 
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Braun."
+
+\end_inset
+
+ schlägt daher einen modifizierten Ansatz vor, den wir im Rahmen des Projekts
+ ebenfalls umgesetzt haben.
+ Anstatt lediglich eine einzelne Population sich entwickeln zu lassen, teilt
+ man die Startpopulationen 
 \begin_inset Formula $X$
 \end_inset
 
@@ -197,8 +264,16 @@ Bei der Verwendung der Genetischen Algorithmen fällt sehr schnell auf, dass
 \end_inset
 
  den klassischen genetischen Algorithmus aus.
- Sobald die einzelnen Teilmengen keine oder nur wenige neue Ergebnisse produzier
-en, d.h.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sobald die einzelnen Teilmengen keine oder nur wenige neue Ergebnisse produziere
+n, d.h.
  die Teilmenge 
 \begin_inset Quotes pld
 \end_inset
@@ -213,10 +288,8 @@ degeneriert
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-\color red
-TODO: Quellen raussuchen und hinzufügen
+Um die Performance dieser Implementierung zu steigern, haben wir die Entwicklung
+en der einzelnen Teilpopulationen auf mehrere Threads aufgeteilt.
 \end_layout
 
 \end_body
